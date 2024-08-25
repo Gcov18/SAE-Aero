@@ -1,7 +1,8 @@
 import logging
 
 # Version of the script
-__version__ = "0.79"
+__version__ = "0.01"
+
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
 
