@@ -1,4 +1,8 @@
 import math
+import logging
+
+# Configure logging to log everything (DEBUG level and above) and write to a file
+logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Constants
 R = 287.05  # Specific gas constant for dry air, J/(kg·K)

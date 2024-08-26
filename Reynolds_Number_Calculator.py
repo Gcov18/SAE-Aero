@@ -1,7 +1,10 @@
 import logging
 
+# Configure logging to log everything (DEBUG level and above) and write to a file
+logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 # Version of the script
-__version__ = "0.02"
+__version__ = "0.03"
 
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")

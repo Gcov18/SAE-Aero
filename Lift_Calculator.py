@@ -8,8 +8,11 @@ import matplotlib.pyplot as plt
 import math
 import logging
 
+# Configure logging to log everything (DEBUG level and above) and write to a file
+logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 # Version of the script
-__version__ = "0.02"
+__version__ = "0.03"
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
 
@@ -80,11 +83,11 @@ class Lift():
         return (self.dynamic_pressure * self.find_cl_from_alpha() * self.wing_area)
     
     def toString(self):
-        print(str(self.get_velocity()), " speed (feet per second)")
-        print(str(self.get_alpha()), " alpha (degrees)")
-        print(str(self.get_wing_area()), " wing area (ft^2)")
-        print(str(self.get_dynamic_pressure()), " dynamic pressure (unit)")
-        print(str(self.calculate_lift()), " Lift (lbs)")
+        logging.info(str(self.get_velocity()), " speed (feet per second)")
+        logging.info(str(self.get_alpha()), " alpha (degrees)")
+        logging.info(str(self.get_wing_area()), " wing area (ft^2)")
+        logging.info(str(self.get_dynamic_pressure()), " dynamic pressure (unit)")
+        logging.info(str(self.calculate_lift()), " Lift (lbs)")
 
 class Plotter():
     def __init__(self):
@@ -114,7 +117,7 @@ class Plotter():
     
     def plot_data(self, liftObj_in):
         plt.figure(1)
-        # plt.subplot(211)
+        plt.subplot(211)
         plt.plot(self.x_data, self.y_data)
         plt.title(f'Lift/Angle generated at {liftObj_in.velocity} fps')
         plt.ylabel('lift generated (lbs)')
@@ -137,21 +140,21 @@ class Plotter():
 # velocity, density, wing_area, alpha
 if __name__ == "__main__":
 
-    print("------ Run 1 ------")
+    logging.info("------ Run 1 ------")
     liftObj = Lift(32, 0.00237, 0.667, 0) # Imperial units (fps, slug/ft^3, ft^2, degrees)
     liftObj.generate_dynamic_pressure()
     liftObj.toString()
 
     
     
-    print("\n------ Run 2 ------")
+    logging.info("\n------ Run 2 ------")
 
     liftObj.set_alpha(10)
     liftObj.generate_dynamic_pressure()
-    print(liftObj.find_cl_from_alpha())
+    logging.info(liftObj.find_cl_from_alpha())
     liftObj.toString()
 
-    print("\n------ Plot ------")
+    logging.info("\n------ Plot ------")
 
     pl = Plotter()
     pl.getPlotData(liftObj, 75)

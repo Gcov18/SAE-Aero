@@ -1,3 +1,8 @@
+import logging
+
+# Configure logging to log everything (DEBUG level and above) and write to a file
+logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 def dynamic_viscosity(temperature):
     """
     Calculate the dynamic viscosity of air using Sutherland's formula.
