@@ -8,7 +8,7 @@ from Reynolds_Number_Calculator import main_reynolds
 logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Version of the script
-__version__ = "0.03"
+__version__ = "0.06"
 
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
@@ -235,12 +235,12 @@ class Ui_MainWindow(object):
         humidity = float(self.humidity_lineEdit.text())
         barometric_pressure = float(self.barometric_pressure_lineEdit.text())
         density = main_density(altitude, humidity, barometric_pressure)
-        self.density_lineEdit.setText(str(density))
+        self.density_lineEdit.setText(f"{density:.3f}")
 
     def calculate_dynamic_viscocity(self):
         temperature = float(self.temperature_lineEdit.text())
         dynamic_viscocity = dynamic_viscosity(temperature)
-        self.dynamic_viscocity_lineEdit.setText(str(dynamic_viscocity))
+        self.dynamic_viscocity_lineEdit.setText(f"{dynamic_viscocity:.2e}")
 
     def calculate_reynolds_number(self):
         density = float(self.density_lineEdit.text())
@@ -248,7 +248,7 @@ class Ui_MainWindow(object):
         characteristic_length = float(self.chord_length_lineEdit.text())
         dynamic_viscosity = float(self.dynamic_viscocity_lineEdit.text())
         reynolds_number = main_reynolds(density, velocity, characteristic_length, dynamic_viscosity)
-        self.reynolds_number_lineEdit.setText(str(reynolds_number))
+        self.reynolds_number_lineEdit.setText(f"{reynolds_number:.2e}")
 
 
 if __name__ == "__main__":
