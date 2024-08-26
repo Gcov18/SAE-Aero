@@ -1,4 +1,4 @@
-# LiftCalculator.py - by Caelan Hadley
+# LiftCalculator.py - by Caelan Hadley (Edited by Garrett Covington)
 # Defines the Lift Object which given an angle of attack, wing area, 
 # speed, and coefficients of lift will calculate your wing's ideal lift.
 
@@ -14,7 +14,7 @@ logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, forma
 # Version of the script
 __version__ = "0.05"
 
-logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
+logging.info(f"Starting Lift_Calculator script v{__version__}")
 
 class Lift():
     def __init__(self, velocity, density, wing_area, alpha):
@@ -83,11 +83,11 @@ class Lift():
         return (self.dynamic_pressure * self.find_cl_from_alpha() * self.wing_area)
     
     def toString(self):
-        logging.info(str(self.get_velocity()), " speed (feet per second)")
-        logging.info(str(self.get_alpha()), " alpha (degrees)")
-        logging.info(str(self.get_wing_area()), " wing area (ft^2)")
-        logging.info(str(self.get_dynamic_pressure()), " dynamic pressure (unit)")
-        logging.info(str(self.calculate_lift()), " Lift (lbs)")
+        logging.info(f"{self.get_velocity()} speed (feet per second)")
+        logging.info(f"{self.get_alpha()} alpha (degrees)")
+        logging.info(f"{self.get_wing_area()} wing area (ft^2)")
+        logging.info(f"{self.get_dynamic_pressure()} dynamic pressure (unit)")
+        logging.info(f"{self.calculate_lift()} Lift (lbs)")
 
 class Plotter():
     def __init__(self):
