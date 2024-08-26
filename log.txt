@@ -1,0 +1,10 @@
+2024-08-26 08:29:54,748 - INFO - Starting Insert Data to Shop Floor script v0.03
+2024-08-26 08:30:02,894 - INFO - Calculating temperature at 1000.0 meters
+2024-08-26 08:30:02,894 - INFO - Temperature at 1000.0 meters is 281.65 K
+2024-08-26 08:30:02,895 - INFO - Calculating temperature at 1000.0 meters
+2024-08-26 08:30:02,895 - INFO - Temperature at 1000.0 meters is 281.65 K
+2024-08-26 08:30:02,895 - INFO - Pressure at 1000.0 meters is 89874.46 Pa
+2024-08-26 08:30:02,895 - INFO - Vapor pressure at 281.65 K and 50.0% humidity is 5.55 Pa
+2024-08-26 08:30:02,895 - INFO - Dry air pressure at 281.65 K and 50.0% humidity is 101319.45 Pa
+2024-08-26 08:30:02,895 - INFO - Air density at 281.65 K, 50.0% humidity, and 101325.0 Pa pressure is 1.25 kg/m^3)
+2024-08-26 08:30:02,895 - INFO - Air density at 1000.0 meters, 50.0% humidity, and 101325.0 Pa pressure is 1.25 kg/m^3

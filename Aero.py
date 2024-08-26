@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import logging
+from Density_Calculator import main
 
 # Configure logging to log everything (DEBUG level and above) and write to a file
 logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -172,7 +173,7 @@ class Ui_MainWindow(object):
         self.reynolds_number_lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.reynolds_number_lineEdit.setReadOnly(True)
         self.reynolds_number_lineEdit.setObjectName("reynolds_number_lineEdit")
-        self.calculate_pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.calculate_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.calculate_density())
         self.calculate_pushButton.setGeometry(QtCore.QRect(570, 410, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -206,6 +207,13 @@ class Ui_MainWindow(object):
         self.chord_length_label.setText(_translate("MainWindow", "Chord Length"))
         self.reynolds_number_label.setText(_translate("MainWindow", "Reynolds Number"))
         self.calculate_pushButton.setText(_translate("MainWindow", "Calculate"))
+
+    def calculate_density(self):
+        altitude = float(self.altitude_lineEdit.text())
+        humidity = float(self.humidity_lineEdit.text())
+        barometric_pressure = float(self.barometric_pressure_lineEdit.text())
+        density = main(altitude, humidity, barometric_pressure)
+        self.density_lineEdit.setText(str(density))
 
 
 if __name__ == "__main__":

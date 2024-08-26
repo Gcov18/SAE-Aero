@@ -12,7 +12,7 @@ import logging
 logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Version of the script
-__version__ = "0.03"
+__version__ = "0.04"
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
 
