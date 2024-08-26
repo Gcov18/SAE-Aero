@@ -22,7 +22,18 @@ def dynamic_viscosity(temperature):
     mu = mu_0 * (temperature / T_0) ** 1.5 * (T_0 + C) / (temperature + C)
     return mu
 
+def main_dynamic_viscocity(temperature):
+    """
+    Main function to calculate air density given altitude, humidity, and barometric pressure.
+    """
+    logging.basicConfig(level=logging.INFO)
+    viscocity = dynamic_viscosity(temperature)
+    logging.info(f"Dynamic viscosity of air at {temperature} K is {viscocity:.6e} Pa·s")
+    return viscocity
+
 # Example usage
-temperature = 300  # Temperature in Kelvin
-viscosity = dynamic_viscosity(temperature)
-print(f"Dynamic viscosity of air at {temperature} K is {viscosity:.6e} Pa·s")
+if __name__ == "__main__":
+    # These values can be replaced by inputs from the GUI
+    temperature = 300  # Temperature in Kelvin
+
+    main_dynamic_viscocity(temperature)

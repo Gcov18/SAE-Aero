@@ -47,7 +47,7 @@ def calculate_air_density(altitude, humidity, barometric_pressure):
     logging.info(f"Air density at {temperature:.2f} K, {humidity}% humidity, and {barometric_pressure} Pa pressure is {air_density:.2f} kg/m^3)")
     return air_density
 
-def main(altitude, humidity, barometric_pressure):
+def main_density(altitude, humidity, barometric_pressure):
     """
     Main function to calculate air density given altitude, humidity, and barometric pressure.
     """
@@ -63,4 +63,4 @@ if __name__ == "__main__":
     humidity = 50  # Humidity in percentage
     barometric_pressure = 101325  # Barometric pressure in Pascals
 
-    main(altitude, humidity, barometric_pressure)
+    main_density(altitude, humidity, barometric_pressure)
