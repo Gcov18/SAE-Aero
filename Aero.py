@@ -8,7 +8,7 @@ from Reynolds_Number_Calculator import main_reynolds
 logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Version of the script
-__version__ = "0.17"
+__version__ = "0.18"
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
 
