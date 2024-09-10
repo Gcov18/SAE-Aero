@@ -39,7 +39,6 @@ def calculate_wing_loading(total_weight_lbs, inner_wing_weight_lbs, outer_wing_w
         "total_wing_loading_lbs_per_ft2": total_wing_loading_lbs_per_ft2
     }
 
-# Example usage
 if __name__ == "__main__":
     # Define the total weight of the aircraft (in pounds)
     total_weight_lbs = 40  
@@ -56,10 +55,8 @@ if __name__ == "__main__":
     # Define the outer wing area (in square feet)
     outer_wing_area_ft2 = 7.1667  
 
-    try:
-        wing_loading = calculate_wing_loading(total_weight_lbs, inner_wing_weight_lbs, outer_wing_weight_lbs, inner_wing_area_ft2, outer_wing_area_ft2)
-        print(f"Inner Wing Loading: {wing_loading['inner_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['inner_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
-        print(f"Outer Wing Loading: {wing_loading['outer_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['outer_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
-        print(f"Total Wing Loading: {wing_loading['total_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['total_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
-    except ValueError as e:
-        print(e)
+    
+    wing_loading = calculate_wing_loading(total_weight_lbs, inner_wing_weight_lbs, outer_wing_weight_lbs, inner_wing_area_ft2, outer_wing_area_ft2)
+    print(f"Inner Wing Loading: {wing_loading['inner_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['inner_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
+    print(f"Outer Wing Loading: {wing_loading['outer_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['outer_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
+    print(f"Total Wing Loading: {wing_loading['total_wing_loading_lbs_per_in2']:.6f} lbs/in², {wing_loading['total_wing_loading_lbs_per_ft2']:.6f} lbs/ft²")
