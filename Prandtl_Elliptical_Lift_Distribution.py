@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import logging
 
 class EllipticalLiftDistribution:
-    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading'):
+    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading',safety_factor=3.5):
         self.span = span
         self.lift_coefficient = lift_coefficient
         self.rho = rho
@@ -12,6 +12,7 @@ class EllipticalLiftDistribution:
         self.root_chord = root_chord
         self.tip_chord = tip_chord
         self.output_folder = output_folder
+        self.safety_factor = safety_factor
         os.makedirs(self.output_folder, exist_ok=True)
         logging.info(f"Parameters: span={span} in, lift_coefficient={lift_coefficient}, rho={rho}, velocity={velocity} ft/s, root_chord={root_chord} in, tip_chord={tip_chord} in")
 
@@ -86,6 +87,45 @@ class EllipticalLiftDistribution:
         plt.savefig(os.path.join(self.output_folder, output_filename))
         plt.show()
 
+    def size_spar(self, bending_moments, yield_strength):
+        max_bending_moment = max(bending_moments)
+        required_section_modulus = max_bending_moment * self.safety_factor / yield_strength
+
+        # Given specifications
+        top_bottom_thickness = 0.25  # 1/4" spars at the top and bottom
+        side_thickness = 0.125  # 1/8" thick pieces on the sides
+
+        # Initial guess for height and width
+        h = 2.5  # Initial guess for height in inches
+        b = 1.0  # Initial guess for width in inches
+
+        # Calculate the section modulus for a hollow rectangular cross-section
+        def section_modulus(h, b, top_bottom_thickness, side_thickness):
+            outer_area = b * h
+            inner_height = h - 2 * top_bottom_thickness
+            inner_width = b - 2 * side_thickness
+            inner_area = inner_width * inner_height
+            net_area = outer_area - inner_area
+            return (b * h**2 - inner_width * inner_height**2) / 6
+
+        # Adjust dimensions to meet the required section modulus
+        while section_modulus(h, b, top_bottom_thickness, side_thickness) < required_section_modulus:
+            h += 0.1  # Increment height
+            b += 0.1  # Increment width
+
+        # Calculate the section modulus of the sized spar
+        final_section_modulus = section_modulus(h, b, top_bottom_thickness, side_thickness)
+
+        # Determine the maximum bending moment the spar can handle
+        max_bending_moment_handled = final_section_modulus * yield_strength / self.safety_factor
+
+        logging.info(f"Max bending moment: {max_bending_moment:.2f} lb-in")
+        logging.info(f"Required section modulus: {required_section_modulus:.2f} in^3")
+        logging.info(f"Spar dimensions: height = {h:.2f} in, width = {b:.2f} in")
+        logging.info(f"Max bending moment the spar can handle: {max_bending_moment_handled:.2f} lb-in")
+
+        return h, b, max_bending_moment_handled
+
 # Example usage
 if __name__ == "__main__":
     # Configure logging
@@ -123,3 +163,7 @@ if __name__ == "__main__":
 
     # Save log to picture
     distribution.save_log_to_picture(log_filename='Wing_Loading_Log.log', output_filename='Wing_Loading_log.png')
+
+    # Size the spar
+    yield_strength = 12742  # Example yield strength in psi
+    spar_height, spar_width, max_bending_moment_handled = distribution.size_spar(bending_moments, yield_strength)
