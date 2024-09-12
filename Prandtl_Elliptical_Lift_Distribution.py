@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import logging
 
 class EllipticalLiftDistribution:
-    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading',safety_factor=3.3):
+    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading',design_load=3.52):
         self.span = span
         self.lift_coefficient = lift_coefficient
         self.rho = rho
@@ -12,7 +12,7 @@ class EllipticalLiftDistribution:
         self.root_chord = root_chord
         self.tip_chord = tip_chord
         self.output_folder = output_folder
-        self.safety_factor = safety_factor
+        self.design_load = design_load
         os.makedirs(self.output_folder, exist_ok=True)
         logging.info(f"Parameters: span={span} in, lift_coefficient={lift_coefficient}, rho={rho}, velocity={velocity} ft/s, root_chord={root_chord} in, tip_chord={tip_chord} in")
 
@@ -66,30 +66,9 @@ class EllipticalLiftDistribution:
         for pos, (lift, chord, load, shear_force, bending_moment) in zip(positions, lifts_chords_loads_shear_moment):
             logging.info(f"Lift per unit span at {pos:.2f} in: {lift:.2f} lb/in, Chord length: {chord:.2f} in, Load: {load:.2f} lb, Shear force: {shear_force:.2f} lb, Bending moment: {bending_moment:.2f} lb-in")
 
-    def save_log_to_picture(self, log_filename='Wing_Loading_Log.log', output_filename='Wing_Loading_log.png'):
-        with open(log_filename, 'r') as log_file:
-            log_content = log_file.read()
-
-        # Calculate the number of lines in the log content
-        lines = log_content.split('\n')
-        num_lines = len(lines)
-
-        # Calculate the maximum line length
-        max_line_length = max(len(line) for line in lines)
-
-        # Set figure size based on the number of lines and maximum line length, with minimum dimensions
-        fig_height = max(10, num_lines * 0.2)
-        fig_width = max(10, max_line_length * 0.1)
-
-        plt.figure(figsize=(fig_width, fig_height))  # Set dynamic width and height
-        plt.text(0.01, 0.99, log_content, verticalalignment='top', horizontalalignment='left', fontsize=10, family='monospace')
-        plt.axis('off')
-        plt.savefig(os.path.join(self.output_folder, output_filename))
-        plt.show()
-
     def size_spar(self, bending_moments, yield_strength):
         max_bending_moment = max(bending_moments)
-        required_section_modulus = max_bending_moment * self.safety_factor / yield_strength
+        required_section_modulus = max_bending_moment * self.design_load / yield_strength
 
         # Given specifications
         top_bottom_thickness = 0.25  # 1/4" spars at the top and bottom
@@ -117,7 +96,7 @@ class EllipticalLiftDistribution:
         final_section_modulus = section_modulus(h, b, top_bottom_thickness, side_thickness)
 
         # Determine the maximum bending moment the spar can handle
-        max_bending_moment_handled = final_section_modulus * yield_strength / self.safety_factor
+        max_bending_moment_handled = final_section_modulus * yield_strength / self.design_load
 
         logging.info(f"Max bending moment: {max_bending_moment:.2f} lb-in")
         logging.info(f"Required section modulus: {required_section_modulus:.2f} in^3")
@@ -139,6 +118,9 @@ if __name__ == "__main__":
     velocity = 38.0  # Flight velocity in feet per second
     root_chord = 3 * 12  # Root chord length in inches
     tip_chord = 1 * 12  # Tip chord length in inches
+    # design_load = 3.52  # Design load
+    # Sf = 1.10  # Safety factor
+    # G_load = 3.2  # Gust load
 
     # Create an instance of the class
     distribution = EllipticalLiftDistribution(span, lift_coefficient, rho, velocity, root_chord, tip_chord)
@@ -162,7 +144,7 @@ if __name__ == "__main__":
     distribution.log_results(positions, lifts_chords_loads_shear_moment)
 
     # Save log to picture
-    distribution.save_log_to_picture(log_filename='Wing_Loading_Log.log', output_filename='Wing_Loading_log.png')
+    # distribution.save_log_to_picture(log_filename='Wing_Loading_Log.log', output_filename='Wing_Loading_log.png')
 
     # Size the spar
     yield_strength = 12742  # Example yield strength in psi
