@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import logging
 
 class EllipticalLiftDistribution:
-    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading',safety_factor=3.5):
+    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading',safety_factor=3.3):
         self.span = span
         self.lift_coefficient = lift_coefficient
         self.rho = rho
@@ -97,7 +97,7 @@ class EllipticalLiftDistribution:
 
         # Initial guess for height and width
         h = 2.5  # Initial guess for height in inches
-        b = 1.0  # Initial guess for width in inches
+        b = .5  # Initial guess for width in inches
 
         # Calculate the section modulus for a hollow rectangular cross-section
         def section_modulus(h, b, top_bottom_thickness, side_thickness):
@@ -134,7 +134,7 @@ if __name__ == "__main__":
 
     # Define parameters in imperial units (inches)
     span = 15 * 12  # Total wingspan in inches
-    lift_coefficient = 1.069  # Lift coefficient (CL)
+    lift_coefficient = 1.165  # Lift coefficient (CL)
     rho = 0.0023769  # Air density in slugs/ft³
     velocity = 38.0  # Flight velocity in feet per second
     root_chord = 3 * 12  # Root chord length in inches
