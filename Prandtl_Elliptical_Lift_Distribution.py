@@ -11,7 +11,7 @@ logging.basicConfig(filename='lift_distribution.log', level=logging.INFO,
 span = 15 * 12  # Total wingspan in inches
 lift_coefficient = 1.165  # Lift coefficient (CL)
 rho = 0.0023769  # Air density in slugs/ft³
-velocity = 32.0  # Flight velocity in feet per second
+velocity = 38.0  # Flight velocity in feet per second
 root_chord = 3 * 12  # Root chord length in inches
 tip_chord = 1 * 12  # Tip chord length in inches
 
@@ -65,7 +65,7 @@ for i in range(len(positions) - 1, -1, -1):
 lifts_chords_loads_shear_moment = [(lift, chord, load, shear_force, bending_moment) for (lift, chord), load, shear_force, bending_moment in zip(lifts_and_chords, loads, shear_forces, bending_moments)]
 
 # Plot the lift distribution
-plt.figure(figsize=(10, 6))
+plt.figure(num=1, figsize=(10, 6))
 plt.plot(positions, [lift for lift, _, _, _, _ in lifts_chords_loads_shear_moment], '-o', label='Elliptical Lift Distribution')
 plt.xlabel('Spanwise Position (in)')
 plt.ylabel('Lift per Unit Span (lb/in)')
@@ -77,7 +77,7 @@ plt.show()
 logging.info("Plotted and saved the lift distribution")
 
 # Plot the load distribution
-plt.figure(figsize=(10, 6))
+plt.figure(num=2, figsize=(10, 6))
 plt.plot(positions, loads, '-o', label='Load Distribution', color='b')
 plt.xlabel('Spanwise Position (in)')
 plt.ylabel('Load (lb)')
@@ -89,7 +89,7 @@ plt.show()
 logging.info("Plotted and saved the load distribution")
 
 # Plot the shear force distribution
-plt.figure(figsize=(10, 6))
+plt.figure(num=3, figsize=(10, 6))
 plt.plot(positions, shear_forces, '-o', label='Shear Force Distribution', color='r')
 plt.xlabel('Spanwise Position (in)')
 plt.ylabel('Shear Force (lb)')
@@ -101,7 +101,7 @@ plt.show()
 logging.info("Plotted and saved the shear force distribution")
 
 # Plot the bending moment distribution
-plt.figure(figsize=(10, 6))
+plt.figure(num=4, figsize=(10, 6))
 plt.plot(positions, bending_moments, '-o', label='Bending Moment Distribution', color='g')
 plt.xlabel('Spanwise Position (in)')
 plt.ylabel('Bending Moment (lb-in)')

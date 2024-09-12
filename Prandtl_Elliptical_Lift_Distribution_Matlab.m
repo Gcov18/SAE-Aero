@@ -58,7 +58,7 @@ figure;
 plot(positions, lifts_and_chords(:, 1), '-o');
 xlabel('Spanwise Position (in)');
 ylabel('Lift per Unit Span (lb/in)');
-title('Elliptical Lift Distribution at Specific Positions');
+title('Figure 1: Elliptical Lift Distribution at Specific Positions');
 grid on;
 
 % Plot the load distribution
@@ -66,7 +66,7 @@ figure;
 plot(positions, loads, '-o', 'Color', 'b');
 xlabel('Spanwise Position (in)');
 ylabel('Load (lb)');
-title('Load Distribution at Specific Positions');
+title('Figure 2: Load Distribution at Specific Positions');
 grid on;
 
 % Plot the shear force distribution
@@ -74,7 +74,7 @@ figure;
 plot(positions, shear_forces, '-o', 'Color', 'r');
 xlabel('Spanwise Position (in)');
 ylabel('Shear Force (lb)');
-title('Shear Force Distribution at Specific Positions');
+title('Figure 3: Shear Force Distribution at Specific Positions');
 grid on;
 
 % Plot the bending moment distribution
@@ -82,7 +82,7 @@ figure;
 plot(positions, bending_moments, '-o', 'Color', 'g');
 xlabel('Spanwise Position (in)');
 ylabel('Bending Moment (lb-in)');
-title('Bending Moment Distribution at Specific Positions');
+title('Figure 4: Bending Moment Distribution at Specific Positions');
 grid on;
 
 % Log the lift, chord length, load, shear force, and bending moment for each position
