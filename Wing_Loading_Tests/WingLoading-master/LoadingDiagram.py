@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from tikzplotlib import save as tikz_save
 from math import sin, cos, radians, pi
 from numpy import arange
 

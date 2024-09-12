@@ -9,8 +9,8 @@ from numpy import arange
 from matplotlib import pyplot
 
 # INPUT LINE
-ct = 1.45  # tip chord wing (m)
-cr = 2.80  # root chord wing (m)
+ct = .3048  # tip chord wing (m)
+cr = .9144  # root chord wing (m)
 frospar = 0.25  # chord position of front spar
 respar = 0.75  # chord position of rear spar
 elas_axis = 0.35  # chord position of elastic axis
