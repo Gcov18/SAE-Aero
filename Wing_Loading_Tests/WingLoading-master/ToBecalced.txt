@@ -1,0 +1,22 @@
+Everything that needs to be done
+generate plots
+    Moment diagram
+    Shear diagram
+    Torque diagram
+plot at 3 different fuel levels
+plot every critical case from the flight envelope
+plot the stiffness distribution
+calculate deflection
+calculate twist
+calculate required skin and spar thickness given a material
+
+table of known assumptions
+    Cl
+    Cd
+Description of the wing
+
+stuff that would be nice:
+easily evaluate for different materials and cases
+make the whole process more comprehensive
+simplify the code 
+beter documentation
