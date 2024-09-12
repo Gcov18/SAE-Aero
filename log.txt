@@ -20,3 +20,15 @@
 2024-09-07 20:26:42,472 - INFO - Dry air pressure at 287.50 K and 50.0% humidity is 101955.82 Pa
 2024-09-07 20:26:42,472 - INFO - Air density at 287.50 K, 50.0% humidity, and 101964.0 Pa pressure is 1.24 kg/m^3)
 2024-09-07 20:26:42,472 - INFO - Air density at 100.0 meters, 50.0% humidity, and 101964.0 Pa pressure is 1.24 kg/m^3
+2024-09-12 13:17:34,950 - INFO - Starting Insert Data to Shop Floor script v0.05
+2024-09-12 13:17:34,950 - INFO - Starting Insert Data to Shop Floor script v0.26
+2024-09-12 13:19:13,050 - INFO - Calculating temperature at 500.0 meters
+2024-09-12 13:19:13,050 - INFO - Temperature at 500.0 meters is 284.90 K
+2024-09-12 13:19:13,051 - INFO - Calculating temperature at 500.0 meters
+2024-09-12 13:19:13,051 - INFO - Temperature at 500.0 meters is 284.90 K
+2024-09-12 13:19:13,051 - INFO - Pressure at 500.0 meters is 95460.78 Pa
+2024-09-12 13:19:13,051 - INFO - Vapor pressure at 284.90 K and 50.0% humidity is 6.90 Pa
+2024-09-12 13:19:13,051 - INFO - Dry air pressure at 284.90 K and 50.0% humidity is 101318.10 Pa
+2024-09-12 13:19:13,051 - INFO - Air density at 284.90 K, 50.0% humidity, and 101325.0 Pa pressure is 1.24 kg/m^3)
+2024-09-12 13:19:13,051 - INFO - Air density at 500.0 meters, 50.0% humidity, and 101325.0 Pa pressure is 1.24 kg/m^3
+2024-09-12 13:19:14,684 - INFO - The Reynolds number is: 3.98e+05
