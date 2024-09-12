@@ -1,21 +1,21 @@
-2024-09-12 16:08:34,263 - INFO - Parameters: span=180 in, lift_coefficient=1.069, rho=0.0023769, velocity=38.0 ft/s, root_chord=36 in, tip_chord=12 in
-2024-09-12 16:08:35,756 - INFO - Plotted and saved the elliptical lift distribution
-2024-09-12 16:08:36,014 - INFO - Plotted and saved the load distribution
-2024-09-12 16:08:36,299 - INFO - Plotted and saved the shear force distribution
-2024-09-12 16:08:37,424 - INFO - Plotted and saved the bending moment distribution
-2024-09-12 16:08:37,424 - INFO - Lift per unit span at 3.00 in: 0.91 lb/in, Chord length: 35.20 in, Load: 5.48 lb, Shear force: 47.13 lb, Bending moment: 1655.65 lb-in
-2024-09-12 16:08:37,424 - INFO - Lift per unit span at 9.00 in: 0.87 lb/in, Chord length: 33.60 in, Load: 5.21 lb, Shear force: 41.66 lb, Bending moment: 1372.85 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 15.00 in: 0.82 lb/in, Chord length: 32.00 in, Load: 4.91 lb, Shear force: 36.45 lb, Bending moment: 1122.91 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 21.00 in: 0.77 lb/in, Chord length: 30.40 in, Load: 4.60 lb, Shear force: 31.54 lb, Bending moment: 904.21 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 27.00 in: 0.71 lb/in, Chord length: 28.80 in, Load: 4.28 lb, Shear force: 26.93 lb, Bending moment: 714.99 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 33.00 in: 0.66 lb/in, Chord length: 27.20 in, Load: 3.94 lb, Shear force: 22.66 lb, Bending moment: 553.39 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 39.00 in: 0.60 lb/in, Chord length: 25.60 in, Load: 3.59 lb, Shear force: 18.71 lb, Bending moment: 417.46 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 45.00 in: 0.54 lb/in, Chord length: 24.00 in, Load: 3.24 lb, Shear force: 15.12 lb, Bending moment: 305.17 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 51.00 in: 0.48 lb/in, Chord length: 22.40 in, Load: 2.87 lb, Shear force: 11.89 lb, Bending moment: 214.44 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 57.00 in: 0.42 lb/in, Chord length: 20.80 in, Load: 2.51 lb, Shear force: 9.01 lb, Bending moment: 143.13 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 63.00 in: 0.36 lb/in, Chord length: 19.20 in, Load: 2.14 lb, Shear force: 6.50 lb, Bending moment: 89.06 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 69.00 in: 0.29 lb/in, Chord length: 17.60 in, Load: 1.76 lb, Shear force: 4.37 lb, Bending moment: 50.04 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 75.00 in: 0.23 lb/in, Chord length: 16.00 in, Load: 1.38 lb, Shear force: 2.61 lb, Bending moment: 23.82 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 81.00 in: 0.16 lb/in, Chord length: 14.40 in, Load: 0.98 lb, Shear force: 1.23 lb, Bending moment: 8.16 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 87.00 in: 0.09 lb/in, Chord length: 12.80 in, Load: 0.26 lb, Shear force: 0.26 lb, Bending moment: 0.77 lb-in
-2024-09-12 16:08:37,434 - INFO - Lift per unit span at 90.00 in: 0.00 lb/in, Chord length: 12.00 in, Load: 0.00 lb, Shear force: 0.00 lb, Bending moment: 0.00 lb-in
+2024-09-12 16:15:12,490 - INFO - Parameters: span=180 in, lift_coefficient=1.069, rho=0.0023769, velocity=38.0 ft/s, root_chord=36 in, tip_chord=12 in
+2024-09-12 16:15:13,803 - INFO - Plotted and saved the elliptical lift distribution
+2024-09-12 16:15:14,284 - INFO - Plotted and saved the load distribution
+2024-09-12 16:15:14,807 - INFO - Plotted and saved the shear force distribution
+2024-09-12 16:15:15,425 - INFO - Plotted and saved the bending moment distribution
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 3.00 in: 0.91 lb/in, Chord length: 35.20 in, Load: 5.48 lb, Shear force: 47.13 lb, Bending moment: 1655.65 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 9.00 in: 0.87 lb/in, Chord length: 33.60 in, Load: 5.21 lb, Shear force: 41.66 lb, Bending moment: 1372.85 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 15.00 in: 0.82 lb/in, Chord length: 32.00 in, Load: 4.91 lb, Shear force: 36.45 lb, Bending moment: 1122.91 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 21.00 in: 0.77 lb/in, Chord length: 30.40 in, Load: 4.60 lb, Shear force: 31.54 lb, Bending moment: 904.21 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 27.00 in: 0.71 lb/in, Chord length: 28.80 in, Load: 4.28 lb, Shear force: 26.93 lb, Bending moment: 714.99 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 33.00 in: 0.66 lb/in, Chord length: 27.20 in, Load: 3.94 lb, Shear force: 22.66 lb, Bending moment: 553.39 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 39.00 in: 0.60 lb/in, Chord length: 25.60 in, Load: 3.59 lb, Shear force: 18.71 lb, Bending moment: 417.46 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 45.00 in: 0.54 lb/in, Chord length: 24.00 in, Load: 3.24 lb, Shear force: 15.12 lb, Bending moment: 305.17 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 51.00 in: 0.48 lb/in, Chord length: 22.40 in, Load: 2.87 lb, Shear force: 11.89 lb, Bending moment: 214.44 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 57.00 in: 0.42 lb/in, Chord length: 20.80 in, Load: 2.51 lb, Shear force: 9.01 lb, Bending moment: 143.13 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 63.00 in: 0.36 lb/in, Chord length: 19.20 in, Load: 2.14 lb, Shear force: 6.50 lb, Bending moment: 89.06 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 69.00 in: 0.29 lb/in, Chord length: 17.60 in, Load: 1.76 lb, Shear force: 4.37 lb, Bending moment: 50.04 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 75.00 in: 0.23 lb/in, Chord length: 16.00 in, Load: 1.38 lb, Shear force: 2.61 lb, Bending moment: 23.82 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 81.00 in: 0.16 lb/in, Chord length: 14.40 in, Load: 0.98 lb, Shear force: 1.23 lb, Bending moment: 8.16 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 87.00 in: 0.09 lb/in, Chord length: 12.80 in, Load: 0.26 lb, Shear force: 0.26 lb, Bending moment: 0.77 lb-in
+2024-09-12 16:15:15,425 - INFO - Lift per unit span at 90.00 in: 0.00 lb/in, Chord length: 12.00 in, Load: 0.00 lb, Shear force: 0.00 lb, Bending moment: 0.00 lb-in

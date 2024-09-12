@@ -69,7 +69,18 @@ class EllipticalLiftDistribution:
         with open(log_filename, 'r') as log_file:
             log_content = log_file.read()
 
-        plt.figure(figsize=(10, 10))
+        # Calculate the number of lines in the log content
+        lines = log_content.split('\n')
+        num_lines = len(lines)
+
+        # Calculate the maximum line length
+        max_line_length = max(len(line) for line in lines)
+
+        # Set figure size based on the number of lines and maximum line length, with minimum dimensions
+        fig_height = max(10, num_lines * 0.2)
+        fig_width = max(10, max_line_length * 0.1)
+
+        plt.figure(figsize=(fig_width, fig_height))  # Set dynamic width and height
         plt.text(0.01, 0.99, log_content, verticalalignment='top', horizontalalignment='left', fontsize=10, family='monospace')
         plt.axis('off')
         plt.savefig(os.path.join(self.output_folder, output_filename))
