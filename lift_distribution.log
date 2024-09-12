@@ -1,0 +1,19 @@
+2024-09-12 12:50:10,374 - INFO - Parameters: span=15, lift_coefficient=1.165, rho=0.0023769, velocity=32.0, root_chord=3, tip_chord=1
+2024-09-12 12:50:10,375 - INFO - Calculated elliptical lift distribution
+2024-09-12 12:50:13,479 - INFO - Plotted the lift distribution
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 7.5 ft: 0.00 lb/in, Chord length: 1.00 ft, Load: 0.00 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 7 ft: 0.01 lb/in, Chord length: 1.13 ft, Load: 0.01 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 6.5 ft: 0.01 lb/in, Chord length: 1.27 ft, Load: 0.02 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 6 ft: 0.02 lb/in, Chord length: 1.40 ft, Load: 0.02 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 5.5 ft: 0.02 lb/in, Chord length: 1.53 ft, Load: 0.03 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 5 ft: 0.02 lb/in, Chord length: 1.67 ft, Load: 0.04 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 4.5 ft: 0.03 lb/in, Chord length: 1.80 ft, Load: 0.05 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 4 ft: 0.03 lb/in, Chord length: 1.93 ft, Load: 0.06 lb
+2024-09-12 12:50:13,479 - INFO - Lift per unit span at 3.5 ft: 0.04 lb/in, Chord length: 2.07 ft, Load: 0.08 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 3 ft: 0.04 lb/in, Chord length: 2.20 ft, Load: 0.09 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 2.5 ft: 0.04 lb/in, Chord length: 2.33 ft, Load: 0.10 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 2 ft: 0.05 lb/in, Chord length: 2.47 ft, Load: 0.12 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 1.5 ft: 0.05 lb/in, Chord length: 2.60 ft, Load: 0.13 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 1 ft: 0.05 lb/in, Chord length: 2.73 ft, Load: 0.15 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 0.5 ft: 0.06 lb/in, Chord length: 2.87 ft, Load: 0.16 lb
+2024-09-12 12:50:13,480 - INFO - Lift per unit span at 0 ft: 0.06 lb/in, Chord length: 3.00 ft, Load: 0.18 lb
