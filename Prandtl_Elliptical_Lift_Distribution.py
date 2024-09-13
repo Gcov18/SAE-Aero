@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     # Define parameters in imperial units (inches)
     span = 15 * 12  # Total wingspan in inches
-    lift_coefficient = .946  # Lift coefficient (CL)
+    lift_coefficient = 1.165  # Lift coefficient (CL)
     rho = 0.0023769  # Air density in slugs/ft³
     velocity = 38.0  # Flight velocity in feet per second
     root_chord = 3 * 12  # Root chord length in inches
