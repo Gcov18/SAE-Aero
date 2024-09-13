@@ -13,8 +13,8 @@ tip_chord = 1 * 12;  % Tip chord length in inches
 fprintf('Parameters: span=%d in, lift_coefficient=%.3f, rho=%.7f, velocity=%.1f ft/s, root_chord=%d in, tip_chord=%d in\n', ...
     span, lift_coefficient, rho, velocity, root_chord, tip_chord);
 
-% Example: Find lift per unit span and load at specific positions
-positions = [0.25, 0.75, 1.25, 1.75, 2.25, 2.75, 3.25, 3.75, 4.25, 4.75, 5.25, 5.75, 6.25, 6.75, 7.25, 7.5] * 12;  % Example positions in inches
+% Find lift per unit span and load at specific positions
+positions = [0.166667, 0.5, 0.833333, 1.16667, 1.5, 1.83333, 2.16667, 2.5, 2.83333, 3.16667, 3.458333, 3.75, 4.08333, 4.41667, 4.75, 5.08333, 5.41667, 5.75, 6.08333, 6.41667, 6.75, 7.041667, 7.16667] * 12;  % Example positions in inches
 lifts_and_chords = zeros(length(positions), 2);
 for i = 1:length(positions)
     [lifts_and_chords(i, 1), lifts_and_chords(i, 2)] = lift_at_position(positions(i), span, lift_coefficient, rho, velocity, root_chord, tip_chord);
