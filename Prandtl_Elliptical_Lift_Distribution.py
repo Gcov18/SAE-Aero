@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import logging
 
 class EllipticalLiftDistribution:
-    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading', design_load=3.52):
+    def __init__(self, span, lift_coefficient, rho, velocity, root_chord, tip_chord, output_folder='Wing_Loading', design_load=1.5):
         self.span = span
         self.lift_coefficient = lift_coefficient
         self.rho = rho
@@ -54,6 +54,12 @@ class EllipticalLiftDistribution:
                 bending_moments[i] = bending_moments[i + 1] + shear_forces[i] * delta_pos
             logging.info(f"Position {positions[i]:.2f} in, Bending Moment {bending_moments[i]:.2f} lb-in")
 
+        # Apply 30% safety factor
+        safety_factor = 1.3
+        loads *= safety_factor
+        shear_forces *= safety_factor
+        bending_moments *= safety_factor
+
         return lifts_and_chords, loads, shear_forces, bending_moments
 
     # Plot distributions
@@ -84,8 +90,8 @@ class EllipticalLiftDistribution:
         side_thickness = 0.125  # 1/8" thick pieces on the sides
 
         # Initial guess for height and width
-        h = 2.5  # Initial guess for height in inches
-        b = .5  # Initial guess for width in inches
+        h = 2  # Initial guess for height in inches
+        b = .25  # Initial guess for width in inches
 
         # Calculate the section modulus for a hollow rectangular cross-section
         def section_modulus(h, b, top_bottom_thickness, side_thickness):
@@ -127,7 +133,7 @@ if __name__ == "__main__":
     velocity = 38.0  # Flight velocity in feet per second
     root_chord = 3 * 12  # Root chord length in inches
     tip_chord = 1 * 12  # Tip chord length in inches
-    # design_load = 3.52  # Design load
+    # design_load = 3.5  # Design load
     # Sf = 1.10  # Safety factor
     # G_load = 3.2  # Gust load
 
