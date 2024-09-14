@@ -33,9 +33,9 @@ class EllipticalLiftDistribution:
         for i in range(len(positions) - 1):
             delta_pos = positions[i + 1] - positions[i]
             loads[i] = lifts_and_chords[i][0] * delta_pos
-            logging.debug(f"Position {positions[i]:.2f} in, Lift {lifts_and_chords[i][0]:.2f} lb/in, Delta Pos {delta_pos:.2f} in, Load {loads[i]:.2f} lb")
+            logging.info(f"Position {positions[i]:.2f} in, Lift {lifts_and_chords[i][0]:.2f} lb/in, Delta Pos {delta_pos:.2f} in, Load {loads[i]:.2f} lb")
         loads[-1] = lifts_and_chords[-1][0] * (positions[-1] - positions[-2])
-        logging.debug(f"Position {positions[-1]:.2f} in, Lift {lifts_and_chords[-1][0]:.2f} lb/in, Delta Pos {positions[-1] - positions[-2]:.2f} in, Load {loads[-1]:.2f} lb")
+        logging.info(f"Position {positions[-1]:.2f} in, Lift {lifts_and_chords[-1][0]:.2f} lb/in, Delta Pos {positions[-1] - positions[-2]:.2f} in, Load {loads[-1]:.2f} lb")
 
         shear_forces = np.zeros(len(positions))
         for i in range(len(positions) - 1, -1, -1):
@@ -43,7 +43,7 @@ class EllipticalLiftDistribution:
                 shear_forces[i] = 0  # Shear force at the wing tip is zero
             else:
                 shear_forces[i] = shear_forces[i + 1] + loads[i]
-            logging.debug(f"Position {positions[i]:.2f} in, Shear Force {shear_forces[i]:.2f} lb")
+            logging.info(f"Position {positions[i]:.2f} in, Shear Force {shear_forces[i]:.2f} lb")
 
         bending_moments = np.zeros(len(positions))
         for i in range(len(positions) - 1, -1, -1):
@@ -52,7 +52,7 @@ class EllipticalLiftDistribution:
             else:
                 delta_pos = positions[i + 1] - positions[i]
                 bending_moments[i] = bending_moments[i + 1] + shear_forces[i] * delta_pos
-            logging.debug(f"Position {positions[i]:.2f} in, Bending Moment {bending_moments[i]:.2f} lb-in")
+            logging.info(f"Position {positions[i]:.2f} in, Bending Moment {bending_moments[i]:.2f} lb-in")
 
         return lifts_and_chords, loads, shear_forces, bending_moments
 
@@ -117,7 +117,7 @@ class EllipticalLiftDistribution:
 # Example usage
 if __name__ == "__main__":
     # Configure logging
-    logging.basicConfig(filename='Wing_Loading_Log.log', level=logging.DEBUG, 
+    logging.basicConfig(filename='Wing_Loading_Log.log', level=logging.INFO, 
                         format='%(asctime)s - %(levelname)s - %(message)s')
 
     # Define parameters in imperial units (inches)
