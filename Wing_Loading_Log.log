@@ -1,202 +1,101 @@
-2024-09-14 09:53:53,834 - INFO - Parameters: span=180 in, lift_coefficient=1.165, rho=0.0023769, velocity=38.0 ft/s, root_chord=36 in, tip_chord=12 in
-2024-09-14 09:53:53,834 - INFO - Position 2.00 in, Lift 1.00 lb/in, Delta Pos 4.00 in, Load 4.01 lb
-2024-09-14 09:53:53,834 - INFO - Position 6.00 in, Lift 0.97 lb/in, Delta Pos 4.00 in, Load 3.88 lb
-2024-09-14 09:53:53,834 - INFO - Position 10.00 in, Lift 0.94 lb/in, Delta Pos 4.00 in, Load 3.75 lb
-2024-09-14 09:53:53,834 - INFO - Position 14.00 in, Lift 0.90 lb/in, Delta Pos 4.00 in, Load 3.61 lb
-2024-09-14 09:53:53,834 - INFO - Position 18.00 in, Lift 0.86 lb/in, Delta Pos 4.00 in, Load 3.46 lb
-2024-09-14 09:53:53,834 - INFO - Position 22.00 in, Lift 0.83 lb/in, Delta Pos 4.00 in, Load 3.31 lb
-2024-09-14 09:53:53,834 - INFO - Position 26.00 in, Lift 0.79 lb/in, Delta Pos 4.00 in, Load 3.15 lb
-2024-09-14 09:53:53,834 - INFO - Position 30.00 in, Lift 0.75 lb/in, Delta Pos 4.00 in, Load 2.99 lb
-2024-09-14 09:53:53,834 - INFO - Position 34.00 in, Lift 0.71 lb/in, Delta Pos 4.00 in, Load 2.82 lb
-2024-09-14 09:53:53,835 - INFO - Position 38.00 in, Lift 0.66 lb/in, Delta Pos 3.50 in, Load 2.32 lb
-2024-09-14 09:53:53,835 - INFO - Position 41.50 in, Lift 0.63 lb/in, Delta Pos 3.50 in, Load 2.19 lb
-2024-09-14 09:53:53,835 - INFO - Position 45.00 in, Lift 0.59 lb/in, Delta Pos 4.00 in, Load 2.35 lb
-2024-09-14 09:53:53,835 - INFO - Position 49.00 in, Lift 0.54 lb/in, Delta Pos 4.00 in, Load 2.18 lb
-2024-09-14 09:53:53,835 - INFO - Position 53.00 in, Lift 0.50 lb/in, Delta Pos 4.00 in, Load 2.00 lb
-2024-09-14 09:53:53,835 - INFO - Position 57.00 in, Lift 0.46 lb/in, Delta Pos 4.00 in, Load 1.82 lb
-2024-09-14 09:53:53,835 - INFO - Position 61.00 in, Lift 0.41 lb/in, Delta Pos 4.00 in, Load 1.64 lb
-2024-09-14 09:53:53,835 - INFO - Position 65.00 in, Lift 0.37 lb/in, Delta Pos 4.00 in, Load 1.46 lb
-2024-09-14 09:53:53,835 - INFO - Position 69.00 in, Lift 0.32 lb/in, Delta Pos 4.00 in, Load 1.28 lb
-2024-09-14 09:53:53,835 - INFO - Position 73.00 in, Lift 0.27 lb/in, Delta Pos 4.00 in, Load 1.09 lb
-2024-09-14 09:53:53,835 - INFO - Position 77.00 in, Lift 0.23 lb/in, Delta Pos 4.00 in, Load 0.91 lb
-2024-09-14 09:53:53,835 - INFO - Position 81.00 in, Lift 0.18 lb/in, Delta Pos 3.50 in, Load 0.62 lb
-2024-09-14 09:53:53,835 - INFO - Position 84.50 in, Lift 0.13 lb/in, Delta Pos 1.50 in, Load 0.20 lb
-2024-09-14 09:53:53,835 - INFO - Position 86.00 in, Lift 0.00 lb/in, Delta Pos 1.50 in, Load 0.00 lb
-2024-09-14 09:53:53,835 - INFO - Position 86.00 in, Shear Force 0.00 lb
-2024-09-14 09:53:53,835 - INFO - Position 84.50 in, Shear Force 0.20 lb
-2024-09-14 09:53:53,835 - INFO - Position 81.00 in, Shear Force 0.82 lb
-2024-09-14 09:53:53,835 - INFO - Position 77.00 in, Shear Force 1.72 lb
-2024-09-14 09:53:53,835 - INFO - Position 73.00 in, Shear Force 2.82 lb
-2024-09-14 09:53:53,835 - INFO - Position 69.00 in, Shear Force 4.10 lb
-2024-09-14 09:53:53,835 - INFO - Position 65.00 in, Shear Force 5.56 lb
-2024-09-14 09:53:53,835 - INFO - Position 61.00 in, Shear Force 7.20 lb
-2024-09-14 09:53:53,835 - INFO - Position 57.00 in, Shear Force 9.02 lb
-2024-09-14 09:53:53,835 - INFO - Position 53.00 in, Shear Force 11.02 lb
-2024-09-14 09:53:53,835 - INFO - Position 49.00 in, Shear Force 13.20 lb
-2024-09-14 09:53:53,835 - INFO - Position 45.00 in, Shear Force 15.55 lb
-2024-09-14 09:53:53,835 - INFO - Position 41.50 in, Shear Force 17.74 lb
-2024-09-14 09:53:53,835 - INFO - Position 38.00 in, Shear Force 20.06 lb
-2024-09-14 09:53:53,835 - INFO - Position 34.00 in, Shear Force 22.88 lb
-2024-09-14 09:53:53,835 - INFO - Position 30.00 in, Shear Force 25.87 lb
-2024-09-14 09:53:53,835 - INFO - Position 26.00 in, Shear Force 29.01 lb
-2024-09-14 09:53:53,835 - INFO - Position 22.00 in, Shear Force 32.32 lb
-2024-09-14 09:53:53,835 - INFO - Position 18.00 in, Shear Force 35.78 lb
-2024-09-14 09:53:53,835 - INFO - Position 14.00 in, Shear Force 39.39 lb
-2024-09-14 09:53:53,835 - INFO - Position 10.00 in, Shear Force 43.13 lb
-2024-09-14 09:53:53,835 - INFO - Position 6.00 in, Shear Force 47.02 lb
-2024-09-14 09:53:53,835 - INFO - Position 2.00 in, Shear Force 51.03 lb
-2024-09-14 09:53:53,835 - INFO - Position 86.00 in, Bending Moment 0.00 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 84.50 in, Bending Moment 0.30 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 81.00 in, Bending Moment 3.16 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 77.00 in, Bending Moment 10.05 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 73.00 in, Bending Moment 21.33 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 69.00 in, Bending Moment 37.71 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 65.00 in, Bending Moment 59.94 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 61.00 in, Bending Moment 88.74 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 57.00 in, Bending Moment 124.81 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 53.00 in, Bending Moment 168.89 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 49.00 in, Bending Moment 221.67 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 45.00 in, Bending Moment 283.86 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 41.50 in, Bending Moment 345.94 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 38.00 in, Bending Moment 416.15 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 34.00 in, Bending Moment 507.67 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 30.00 in, Bending Moment 611.13 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 26.00 in, Bending Moment 727.19 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 22.00 in, Bending Moment 856.47 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 18.00 in, Bending Moment 999.59 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 14.00 in, Bending Moment 1157.13 lb-in
-2024-09-14 09:53:53,835 - INFO - Position 10.00 in, Bending Moment 1329.66 lb-in
-2024-09-14 09:53:53,836 - INFO - Position 6.00 in, Bending Moment 1517.72 lb-in
-2024-09-14 09:53:53,836 - INFO - Position 2.00 in, Bending Moment 1721.84 lb-in
-2024-09-14 09:53:55,657 - INFO - Plotted and saved the elliptical lift distribution
-2024-09-14 09:53:56,358 - INFO - Plotted and saved the load distribution
-2024-09-14 09:53:57,213 - INFO - Plotted and saved the shear force distribution
-2024-09-14 09:53:57,947 - INFO - Plotted and saved the bending moment distribution
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 2.00 in: 1.00 lb/in, Chord length: 35.47 in, Load: 5.22 lb, Shear force: 66.34 lb, Bending moment: 2238.39 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 6.00 in: 0.97 lb/in, Chord length: 34.40 in, Load: 5.05 lb, Shear force: 61.12 lb, Bending moment: 1973.04 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 10.00 in: 0.94 lb/in, Chord length: 33.33 in, Load: 4.87 lb, Shear force: 56.07 lb, Bending moment: 1728.56 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 14.00 in: 0.90 lb/in, Chord length: 32.27 in, Load: 4.69 lb, Shear force: 51.20 lb, Bending moment: 1504.26 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 18.00 in: 0.86 lb/in, Chord length: 31.20 in, Load: 4.50 lb, Shear force: 46.51 lb, Bending moment: 1299.46 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 22.00 in: 0.83 lb/in, Chord length: 30.13 in, Load: 4.30 lb, Shear force: 42.02 lb, Bending moment: 1113.42 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 26.00 in: 0.79 lb/in, Chord length: 29.07 in, Load: 4.09 lb, Shear force: 37.72 lb, Bending moment: 945.35 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 30.00 in: 0.75 lb/in, Chord length: 28.00 in, Load: 3.88 lb, Shear force: 33.63 lb, Bending moment: 794.47 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 34.00 in: 0.71 lb/in, Chord length: 26.93 in, Load: 3.67 lb, Shear force: 29.74 lb, Bending moment: 659.97 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 38.00 in: 0.66 lb/in, Chord length: 25.87 in, Load: 3.02 lb, Shear force: 26.08 lb, Bending moment: 540.99 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 41.50 in: 0.63 lb/in, Chord length: 24.93 in, Load: 2.85 lb, Shear force: 23.06 lb, Bending moment: 449.72 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 45.00 in: 0.59 lb/in, Chord length: 24.00 in, Load: 3.06 lb, Shear force: 20.21 lb, Bending moment: 369.02 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 49.00 in: 0.54 lb/in, Chord length: 22.93 in, Load: 2.83 lb, Shear force: 17.15 lb, Bending moment: 288.18 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 53.00 in: 0.50 lb/in, Chord length: 21.87 in, Load: 2.60 lb, Shear force: 14.32 lb, Bending moment: 219.56 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 57.00 in: 0.46 lb/in, Chord length: 20.80 in, Load: 2.37 lb, Shear force: 11.73 lb, Bending moment: 162.26 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 61.00 in: 0.41 lb/in, Chord length: 19.73 in, Load: 2.13 lb, Shear force: 9.36 lb, Bending moment: 115.36 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 65.00 in: 0.37 lb/in, Chord length: 18.67 in, Load: 1.90 lb, Shear force: 7.22 lb, Bending moment: 77.92 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 69.00 in: 0.32 lb/in, Chord length: 17.60 in, Load: 1.66 lb, Shear force: 5.33 lb, Bending moment: 49.03 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 73.00 in: 0.27 lb/in, Chord length: 16.53 in, Load: 1.42 lb, Shear force: 3.66 lb, Bending moment: 27.72 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 77.00 in: 0.23 lb/in, Chord length: 15.47 in, Load: 1.18 lb, Shear force: 2.24 lb, Bending moment: 13.07 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 81.00 in: 0.18 lb/in, Chord length: 14.40 in, Load: 0.81 lb, Shear force: 1.06 lb, Bending moment: 4.11 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 84.50 in: 0.13 lb/in, Chord length: 13.47 in, Load: 0.26 lb, Shear force: 0.26 lb, Bending moment: 0.38 lb-in
-2024-09-14 09:53:57,948 - INFO - Lift per unit span at 86.00 in: 0.00 lb/in, Chord length: 12.00 in, Load: 0.00 lb, Shear force: 0.00 lb, Bending moment: 0.00 lb-in
-2024-09-14 09:53:57,948 - INFO - Max bending moment: 2238.39 lb-in
-2024-09-14 09:53:57,948 - INFO - Required section modulus: 0.26 in^3
-2024-09-14 09:53:57,948 - INFO - Spar dimensions: height = 2.20 in, width = 0.45 in
-2024-09-14 09:53:57,948 - INFO - Max bending moment the spar can handle: 2265.24 lb-in
-2024-09-14 09:56:24,087 - INFO - Parameters: span=180 in, lift_coefficient=1.165, rho=0.0023769, velocity=38.0 ft/s, root_chord=36 in, tip_chord=12 in
-2024-09-14 09:56:24,087 - INFO - Position 2.00 in, Lift 1.00 lb/in, Delta Pos 4.00 in, Load 4.01 lb
-2024-09-14 09:56:24,087 - INFO - Position 6.00 in, Lift 0.97 lb/in, Delta Pos 4.00 in, Load 3.88 lb
-2024-09-14 09:56:24,088 - INFO - Position 10.00 in, Lift 0.94 lb/in, Delta Pos 4.00 in, Load 3.75 lb
-2024-09-14 09:56:24,088 - INFO - Position 14.00 in, Lift 0.90 lb/in, Delta Pos 4.00 in, Load 3.61 lb
-2024-09-14 09:56:24,088 - INFO - Position 18.00 in, Lift 0.86 lb/in, Delta Pos 4.00 in, Load 3.46 lb
-2024-09-14 09:56:24,088 - INFO - Position 22.00 in, Lift 0.83 lb/in, Delta Pos 4.00 in, Load 3.31 lb
-2024-09-14 09:56:24,088 - INFO - Position 26.00 in, Lift 0.79 lb/in, Delta Pos 4.00 in, Load 3.15 lb
-2024-09-14 09:56:24,088 - INFO - Position 30.00 in, Lift 0.75 lb/in, Delta Pos 4.00 in, Load 2.99 lb
-2024-09-14 09:56:24,088 - INFO - Position 34.00 in, Lift 0.71 lb/in, Delta Pos 4.00 in, Load 2.82 lb
-2024-09-14 09:56:24,088 - INFO - Position 38.00 in, Lift 0.66 lb/in, Delta Pos 3.50 in, Load 2.32 lb
-2024-09-14 09:56:24,088 - INFO - Position 41.50 in, Lift 0.63 lb/in, Delta Pos 3.50 in, Load 2.19 lb
-2024-09-14 09:56:24,088 - INFO - Position 45.00 in, Lift 0.59 lb/in, Delta Pos 4.00 in, Load 2.35 lb
-2024-09-14 09:56:24,088 - INFO - Position 49.00 in, Lift 0.54 lb/in, Delta Pos 4.00 in, Load 2.18 lb
-2024-09-14 09:56:24,088 - INFO - Position 53.00 in, Lift 0.50 lb/in, Delta Pos 4.00 in, Load 2.00 lb
-2024-09-14 09:56:24,088 - INFO - Position 57.00 in, Lift 0.46 lb/in, Delta Pos 4.00 in, Load 1.82 lb
-2024-09-14 09:56:24,088 - INFO - Position 61.00 in, Lift 0.41 lb/in, Delta Pos 4.00 in, Load 1.64 lb
-2024-09-14 09:56:24,088 - INFO - Position 65.00 in, Lift 0.37 lb/in, Delta Pos 4.00 in, Load 1.46 lb
-2024-09-14 09:56:24,088 - INFO - Position 69.00 in, Lift 0.32 lb/in, Delta Pos 4.00 in, Load 1.28 lb
-2024-09-14 09:56:24,088 - INFO - Position 73.00 in, Lift 0.27 lb/in, Delta Pos 4.00 in, Load 1.09 lb
-2024-09-14 09:56:24,088 - INFO - Position 77.00 in, Lift 0.23 lb/in, Delta Pos 4.00 in, Load 0.91 lb
-2024-09-14 09:56:24,088 - INFO - Position 81.00 in, Lift 0.18 lb/in, Delta Pos 3.50 in, Load 0.62 lb
-2024-09-14 09:56:24,088 - INFO - Position 84.50 in, Lift 0.13 lb/in, Delta Pos 1.50 in, Load 0.20 lb
-2024-09-14 09:56:24,088 - INFO - Position 86.00 in, Lift 0.00 lb/in, Delta Pos 1.50 in, Load 0.00 lb
-2024-09-14 09:56:24,088 - INFO - Position 86.00 in, Shear Force 0.00 lb
-2024-09-14 09:56:24,088 - INFO - Position 84.50 in, Shear Force 0.20 lb
-2024-09-14 09:56:24,088 - INFO - Position 81.00 in, Shear Force 0.82 lb
-2024-09-14 09:56:24,088 - INFO - Position 77.00 in, Shear Force 1.72 lb
-2024-09-14 09:56:24,088 - INFO - Position 73.00 in, Shear Force 2.82 lb
-2024-09-14 09:56:24,088 - INFO - Position 69.00 in, Shear Force 4.10 lb
-2024-09-14 09:56:24,088 - INFO - Position 65.00 in, Shear Force 5.56 lb
-2024-09-14 09:56:24,088 - INFO - Position 61.00 in, Shear Force 7.20 lb
-2024-09-14 09:56:24,088 - INFO - Position 57.00 in, Shear Force 9.02 lb
-2024-09-14 09:56:24,088 - INFO - Position 53.00 in, Shear Force 11.02 lb
-2024-09-14 09:56:24,088 - INFO - Position 49.00 in, Shear Force 13.20 lb
-2024-09-14 09:56:24,088 - INFO - Position 45.00 in, Shear Force 15.55 lb
-2024-09-14 09:56:24,088 - INFO - Position 41.50 in, Shear Force 17.74 lb
-2024-09-14 09:56:24,088 - INFO - Position 38.00 in, Shear Force 20.06 lb
-2024-09-14 09:56:24,088 - INFO - Position 34.00 in, Shear Force 22.88 lb
-2024-09-14 09:56:24,088 - INFO - Position 30.00 in, Shear Force 25.87 lb
-2024-09-14 09:56:24,088 - INFO - Position 26.00 in, Shear Force 29.01 lb
-2024-09-14 09:56:24,088 - INFO - Position 22.00 in, Shear Force 32.32 lb
-2024-09-14 09:56:24,088 - INFO - Position 18.00 in, Shear Force 35.78 lb
-2024-09-14 09:56:24,088 - INFO - Position 14.00 in, Shear Force 39.39 lb
-2024-09-14 09:56:24,088 - INFO - Position 10.00 in, Shear Force 43.13 lb
-2024-09-14 09:56:24,088 - INFO - Position 6.00 in, Shear Force 47.02 lb
-2024-09-14 09:56:24,088 - INFO - Position 2.00 in, Shear Force 51.03 lb
-2024-09-14 09:56:24,089 - INFO - Position 86.00 in, Bending Moment 0.00 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 84.50 in, Bending Moment 0.30 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 81.00 in, Bending Moment 3.16 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 77.00 in, Bending Moment 10.05 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 73.00 in, Bending Moment 21.33 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 69.00 in, Bending Moment 37.71 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 65.00 in, Bending Moment 59.94 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 61.00 in, Bending Moment 88.74 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 57.00 in, Bending Moment 124.81 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 53.00 in, Bending Moment 168.89 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 49.00 in, Bending Moment 221.67 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 45.00 in, Bending Moment 283.86 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 41.50 in, Bending Moment 345.94 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 38.00 in, Bending Moment 416.15 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 34.00 in, Bending Moment 507.67 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 30.00 in, Bending Moment 611.13 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 26.00 in, Bending Moment 727.19 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 22.00 in, Bending Moment 856.47 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 18.00 in, Bending Moment 999.59 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 14.00 in, Bending Moment 1157.13 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 10.00 in, Bending Moment 1329.66 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 6.00 in, Bending Moment 1517.72 lb-in
-2024-09-14 09:56:24,089 - INFO - Position 2.00 in, Bending Moment 1721.84 lb-in
-2024-09-14 09:56:25,998 - INFO - Plotted and saved the elliptical lift distribution
-2024-09-14 09:56:26,683 - INFO - Plotted and saved the load distribution
-2024-09-14 09:56:27,359 - INFO - Plotted and saved the shear force distribution
-2024-09-14 09:56:28,064 - INFO - Plotted and saved the bending moment distribution
-2024-09-14 09:56:28,064 - INFO - Lift per unit span at 2.00 in: 1.00 lb/in, Chord length: 35.47 in, Load: 5.22 lb, Shear force: 66.34 lb, Bending moment: 2238.39 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 6.00 in: 0.97 lb/in, Chord length: 34.40 in, Load: 5.05 lb, Shear force: 61.12 lb, Bending moment: 1973.04 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 10.00 in: 0.94 lb/in, Chord length: 33.33 in, Load: 4.87 lb, Shear force: 56.07 lb, Bending moment: 1728.56 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 14.00 in: 0.90 lb/in, Chord length: 32.27 in, Load: 4.69 lb, Shear force: 51.20 lb, Bending moment: 1504.26 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 18.00 in: 0.86 lb/in, Chord length: 31.20 in, Load: 4.50 lb, Shear force: 46.51 lb, Bending moment: 1299.46 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 22.00 in: 0.83 lb/in, Chord length: 30.13 in, Load: 4.30 lb, Shear force: 42.02 lb, Bending moment: 1113.42 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 26.00 in: 0.79 lb/in, Chord length: 29.07 in, Load: 4.09 lb, Shear force: 37.72 lb, Bending moment: 945.35 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 30.00 in: 0.75 lb/in, Chord length: 28.00 in, Load: 3.88 lb, Shear force: 33.63 lb, Bending moment: 794.47 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 34.00 in: 0.71 lb/in, Chord length: 26.93 in, Load: 3.67 lb, Shear force: 29.74 lb, Bending moment: 659.97 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 38.00 in: 0.66 lb/in, Chord length: 25.87 in, Load: 3.02 lb, Shear force: 26.08 lb, Bending moment: 540.99 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 41.50 in: 0.63 lb/in, Chord length: 24.93 in, Load: 2.85 lb, Shear force: 23.06 lb, Bending moment: 449.72 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 45.00 in: 0.59 lb/in, Chord length: 24.00 in, Load: 3.06 lb, Shear force: 20.21 lb, Bending moment: 369.02 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 49.00 in: 0.54 lb/in, Chord length: 22.93 in, Load: 2.83 lb, Shear force: 17.15 lb, Bending moment: 288.18 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 53.00 in: 0.50 lb/in, Chord length: 21.87 in, Load: 2.60 lb, Shear force: 14.32 lb, Bending moment: 219.56 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 57.00 in: 0.46 lb/in, Chord length: 20.80 in, Load: 2.37 lb, Shear force: 11.73 lb, Bending moment: 162.26 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 61.00 in: 0.41 lb/in, Chord length: 19.73 in, Load: 2.13 lb, Shear force: 9.36 lb, Bending moment: 115.36 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 65.00 in: 0.37 lb/in, Chord length: 18.67 in, Load: 1.90 lb, Shear force: 7.22 lb, Bending moment: 77.92 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 69.00 in: 0.32 lb/in, Chord length: 17.60 in, Load: 1.66 lb, Shear force: 5.33 lb, Bending moment: 49.03 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 73.00 in: 0.27 lb/in, Chord length: 16.53 in, Load: 1.42 lb, Shear force: 3.66 lb, Bending moment: 27.72 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 77.00 in: 0.23 lb/in, Chord length: 15.47 in, Load: 1.18 lb, Shear force: 2.24 lb, Bending moment: 13.07 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 81.00 in: 0.18 lb/in, Chord length: 14.40 in, Load: 0.81 lb, Shear force: 1.06 lb, Bending moment: 4.11 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 84.50 in: 0.13 lb/in, Chord length: 13.47 in, Load: 0.26 lb, Shear force: 0.26 lb, Bending moment: 0.38 lb-in
-2024-09-14 09:56:28,065 - INFO - Lift per unit span at 86.00 in: 0.00 lb/in, Chord length: 12.00 in, Load: 0.00 lb, Shear force: 0.00 lb, Bending moment: 0.00 lb-in
-2024-09-14 09:56:28,065 - INFO - Max bending moment: 2238.39 lb-in
-2024-09-14 09:56:28,065 - INFO - Required section modulus: 0.26 in^3
-2024-09-14 09:56:28,065 - INFO - Spar dimensions: height = 2.20 in, width = 0.45 in
-2024-09-14 09:56:28,065 - INFO - Max bending moment the spar can handle: 2265.24 lb-in
+2024-09-18 14:04:55,693 - INFO - Parameters: span=180 in, lift_coefficient=1.165, rho=0.0023769, velocity=38.0 ft/s, root_chord=36 in, tip_chord=12 in
+2024-09-18 14:04:55,693 - INFO - Position 2.00 in, Lift 1.00 lb/in, Delta Pos 4.00 in, Load 4.01 lb
+2024-09-18 14:04:55,693 - INFO - Position 6.00 in, Lift 0.97 lb/in, Delta Pos 4.00 in, Load 3.88 lb
+2024-09-18 14:04:55,693 - INFO - Position 10.00 in, Lift 0.94 lb/in, Delta Pos 4.00 in, Load 3.75 lb
+2024-09-18 14:04:55,693 - INFO - Position 14.00 in, Lift 0.90 lb/in, Delta Pos 4.00 in, Load 3.61 lb
+2024-09-18 14:04:55,693 - INFO - Position 18.00 in, Lift 0.86 lb/in, Delta Pos 4.00 in, Load 3.46 lb
+2024-09-18 14:04:55,693 - INFO - Position 22.00 in, Lift 0.83 lb/in, Delta Pos 4.00 in, Load 3.31 lb
+2024-09-18 14:04:55,693 - INFO - Position 26.00 in, Lift 0.79 lb/in, Delta Pos 4.00 in, Load 3.15 lb
+2024-09-18 14:04:55,693 - INFO - Position 30.00 in, Lift 0.75 lb/in, Delta Pos 4.00 in, Load 2.99 lb
+2024-09-18 14:04:55,693 - INFO - Position 34.00 in, Lift 0.71 lb/in, Delta Pos 4.00 in, Load 2.82 lb
+2024-09-18 14:04:55,693 - INFO - Position 38.00 in, Lift 0.66 lb/in, Delta Pos 3.50 in, Load 2.32 lb
+2024-09-18 14:04:55,693 - INFO - Position 41.50 in, Lift 0.63 lb/in, Delta Pos 3.50 in, Load 2.19 lb
+2024-09-18 14:04:55,693 - INFO - Position 45.00 in, Lift 0.59 lb/in, Delta Pos 4.00 in, Load 2.35 lb
+2024-09-18 14:04:55,694 - INFO - Position 49.00 in, Lift 0.54 lb/in, Delta Pos 4.00 in, Load 2.18 lb
+2024-09-18 14:04:55,694 - INFO - Position 53.00 in, Lift 0.50 lb/in, Delta Pos 4.00 in, Load 2.00 lb
+2024-09-18 14:04:55,694 - INFO - Position 57.00 in, Lift 0.46 lb/in, Delta Pos 4.00 in, Load 1.82 lb
+2024-09-18 14:04:55,694 - INFO - Position 61.00 in, Lift 0.41 lb/in, Delta Pos 4.00 in, Load 1.64 lb
+2024-09-18 14:04:55,694 - INFO - Position 65.00 in, Lift 0.37 lb/in, Delta Pos 4.00 in, Load 1.46 lb
+2024-09-18 14:04:55,694 - INFO - Position 69.00 in, Lift 0.32 lb/in, Delta Pos 4.00 in, Load 1.28 lb
+2024-09-18 14:04:55,694 - INFO - Position 73.00 in, Lift 0.27 lb/in, Delta Pos 4.00 in, Load 1.09 lb
+2024-09-18 14:04:55,694 - INFO - Position 77.00 in, Lift 0.23 lb/in, Delta Pos 4.00 in, Load 0.91 lb
+2024-09-18 14:04:55,694 - INFO - Position 81.00 in, Lift 0.18 lb/in, Delta Pos 3.50 in, Load 0.62 lb
+2024-09-18 14:04:55,694 - INFO - Position 84.50 in, Lift 0.13 lb/in, Delta Pos 1.50 in, Load 0.20 lb
+2024-09-18 14:04:55,694 - INFO - Position 86.00 in, Lift 0.00 lb/in, Delta Pos 1.50 in, Load 0.00 lb
+2024-09-18 14:04:55,694 - INFO - Position 86.00 in, Shear Force 0.00 lb
+2024-09-18 14:04:55,694 - INFO - Position 84.50 in, Shear Force 0.20 lb
+2024-09-18 14:04:55,694 - INFO - Position 81.00 in, Shear Force 0.82 lb
+2024-09-18 14:04:55,694 - INFO - Position 77.00 in, Shear Force 1.72 lb
+2024-09-18 14:04:55,694 - INFO - Position 73.00 in, Shear Force 2.82 lb
+2024-09-18 14:04:55,694 - INFO - Position 69.00 in, Shear Force 4.10 lb
+2024-09-18 14:04:55,694 - INFO - Position 65.00 in, Shear Force 5.56 lb
+2024-09-18 14:04:55,694 - INFO - Position 61.00 in, Shear Force 7.20 lb
+2024-09-18 14:04:55,694 - INFO - Position 57.00 in, Shear Force 9.02 lb
+2024-09-18 14:04:55,694 - INFO - Position 53.00 in, Shear Force 11.02 lb
+2024-09-18 14:04:55,694 - INFO - Position 49.00 in, Shear Force 13.20 lb
+2024-09-18 14:04:55,694 - INFO - Position 45.00 in, Shear Force 15.55 lb
+2024-09-18 14:04:55,694 - INFO - Position 41.50 in, Shear Force 17.74 lb
+2024-09-18 14:04:55,694 - INFO - Position 38.00 in, Shear Force 20.06 lb
+2024-09-18 14:04:55,694 - INFO - Position 34.00 in, Shear Force 22.88 lb
+2024-09-18 14:04:55,694 - INFO - Position 30.00 in, Shear Force 25.87 lb
+2024-09-18 14:04:55,694 - INFO - Position 26.00 in, Shear Force 29.01 lb
+2024-09-18 14:04:55,694 - INFO - Position 22.00 in, Shear Force 32.32 lb
+2024-09-18 14:04:55,694 - INFO - Position 18.00 in, Shear Force 35.78 lb
+2024-09-18 14:04:55,694 - INFO - Position 14.00 in, Shear Force 39.39 lb
+2024-09-18 14:04:55,694 - INFO - Position 10.00 in, Shear Force 43.13 lb
+2024-09-18 14:04:55,694 - INFO - Position 6.00 in, Shear Force 47.02 lb
+2024-09-18 14:04:55,694 - INFO - Position 2.00 in, Shear Force 51.03 lb
+2024-09-18 14:04:55,694 - INFO - Position 86.00 in, Bending Moment 0.00 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 84.50 in, Bending Moment 0.30 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 81.00 in, Bending Moment 3.16 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 77.00 in, Bending Moment 10.05 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 73.00 in, Bending Moment 21.33 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 69.00 in, Bending Moment 37.71 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 65.00 in, Bending Moment 59.94 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 61.00 in, Bending Moment 88.74 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 57.00 in, Bending Moment 124.81 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 53.00 in, Bending Moment 168.89 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 49.00 in, Bending Moment 221.67 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 45.00 in, Bending Moment 283.86 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 41.50 in, Bending Moment 345.94 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 38.00 in, Bending Moment 416.15 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 34.00 in, Bending Moment 507.67 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 30.00 in, Bending Moment 611.13 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 26.00 in, Bending Moment 727.19 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 22.00 in, Bending Moment 856.47 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 18.00 in, Bending Moment 999.59 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 14.00 in, Bending Moment 1157.13 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 10.00 in, Bending Moment 1329.66 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 6.00 in, Bending Moment 1517.72 lb-in
+2024-09-18 14:04:55,694 - INFO - Position 2.00 in, Bending Moment 1721.84 lb-in
+2024-09-18 14:04:58,243 - INFO - Plotted and saved the elliptical lift distribution
+2024-09-18 14:04:59,551 - INFO - Plotted and saved the load distribution
+2024-09-18 14:05:01,553 - INFO - Plotted and saved the shear force distribution
+2024-09-18 14:05:04,247 - INFO - Plotted and saved the bending moment distribution
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 2.00 in: 1.00 lb/in, Chord length: 35.47 in, Load: 5.22 lb, Shear force: 66.34 lb, Bending moment: 2238.39 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 6.00 in: 0.97 lb/in, Chord length: 34.40 in, Load: 5.05 lb, Shear force: 61.12 lb, Bending moment: 1973.04 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 10.00 in: 0.94 lb/in, Chord length: 33.33 in, Load: 4.87 lb, Shear force: 56.07 lb, Bending moment: 1728.56 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 14.00 in: 0.90 lb/in, Chord length: 32.27 in, Load: 4.69 lb, Shear force: 51.20 lb, Bending moment: 1504.26 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 18.00 in: 0.86 lb/in, Chord length: 31.20 in, Load: 4.50 lb, Shear force: 46.51 lb, Bending moment: 1299.46 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 22.00 in: 0.83 lb/in, Chord length: 30.13 in, Load: 4.30 lb, Shear force: 42.02 lb, Bending moment: 1113.42 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 26.00 in: 0.79 lb/in, Chord length: 29.07 in, Load: 4.09 lb, Shear force: 37.72 lb, Bending moment: 945.35 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 30.00 in: 0.75 lb/in, Chord length: 28.00 in, Load: 3.88 lb, Shear force: 33.63 lb, Bending moment: 794.47 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 34.00 in: 0.71 lb/in, Chord length: 26.93 in, Load: 3.67 lb, Shear force: 29.74 lb, Bending moment: 659.97 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 38.00 in: 0.66 lb/in, Chord length: 25.87 in, Load: 3.02 lb, Shear force: 26.08 lb, Bending moment: 540.99 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 41.50 in: 0.63 lb/in, Chord length: 24.93 in, Load: 2.85 lb, Shear force: 23.06 lb, Bending moment: 449.72 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 45.00 in: 0.59 lb/in, Chord length: 24.00 in, Load: 3.06 lb, Shear force: 20.21 lb, Bending moment: 369.02 lb-in
+2024-09-18 14:05:04,247 - INFO - Lift per unit span at 49.00 in: 0.54 lb/in, Chord length: 22.93 in, Load: 2.83 lb, Shear force: 17.15 lb, Bending moment: 288.18 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 53.00 in: 0.50 lb/in, Chord length: 21.87 in, Load: 2.60 lb, Shear force: 14.32 lb, Bending moment: 219.56 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 57.00 in: 0.46 lb/in, Chord length: 20.80 in, Load: 2.37 lb, Shear force: 11.73 lb, Bending moment: 162.26 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 61.00 in: 0.41 lb/in, Chord length: 19.73 in, Load: 2.13 lb, Shear force: 9.36 lb, Bending moment: 115.36 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 65.00 in: 0.37 lb/in, Chord length: 18.67 in, Load: 1.90 lb, Shear force: 7.22 lb, Bending moment: 77.92 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 69.00 in: 0.32 lb/in, Chord length: 17.60 in, Load: 1.66 lb, Shear force: 5.33 lb, Bending moment: 49.03 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 73.00 in: 0.27 lb/in, Chord length: 16.53 in, Load: 1.42 lb, Shear force: 3.66 lb, Bending moment: 27.72 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 77.00 in: 0.23 lb/in, Chord length: 15.47 in, Load: 1.18 lb, Shear force: 2.24 lb, Bending moment: 13.07 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 81.00 in: 0.18 lb/in, Chord length: 14.40 in, Load: 0.81 lb, Shear force: 1.06 lb, Bending moment: 4.11 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 84.50 in: 0.13 lb/in, Chord length: 13.47 in, Load: 0.26 lb, Shear force: 0.26 lb, Bending moment: 0.38 lb-in
+2024-09-18 14:05:04,248 - INFO - Lift per unit span at 86.00 in: 0.00 lb/in, Chord length: 12.00 in, Load: 0.00 lb, Shear force: 0.00 lb, Bending moment: 0.00 lb-in
+2024-09-18 14:05:04,248 - INFO - Max bending moment: 2238.39 lb-in
+2024-09-18 14:05:04,248 - INFO - Required section modulus: 0.26 in^3
+2024-09-18 14:05:04,248 - INFO - Spar dimensions: height = 2.20 in, width = 0.45 in
+2024-09-18 14:05:04,248 - INFO - Max bending moment the spar can handle: 2265.24 lb-in
