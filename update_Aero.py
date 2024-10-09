@@ -19,7 +19,7 @@ if commit_count is not None:
     version = commit_count / 100
 
     # Specify the path to the Python file
-    file_path = 'C:\\Coding\\SAE_Aero\\Aero.py'
+    file_path = 'C:\\Coding\\SAE-Aero\\Aero.py'
 
     # Read the current content of the Python file
     with open(file_path, 'r') as file:
