@@ -77,6 +77,10 @@ class Aileron:
         leading_edge_x_left = [0, 6.04]
         leading_edge_y_left = [0, wing_span_in / 2]
 
+        # MAC line at 43 inches
+        mac_x = [3, 27]
+        mac_y = [43, 43]
+
         # Plot the wing (left half)
         ax.plot(wing_x_left, wing_y_left, 'b', label='Wing (Left Half)')
 
@@ -89,6 +93,9 @@ class Aileron:
 
         # Shade the aileron area with grey
         ax.fill(aileron_x_left, aileron_y_left, 'grey', alpha=0.5, label='Aileron Area')
+
+        # Plot the MAC line
+        ax.plot(mac_x, mac_y, 'purple', label='MAC Line')
 
         # Set labels and title
         ax.set_xlabel('Chord Length (in)')
