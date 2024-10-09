@@ -1,68 +1,81 @@
 import matplotlib.pyplot as plt
+import logging
+
+# Configure logging
+logging.basicConfig(filename='Aileron_Loading_Log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Aileron:
-    def __init__(self, root_chord_length_ft, tip_chord_length_ft, span_ft, hinge_line_position_ft, lift_coefficient, rho_slug_ft3, velocity_ft_s, deflection_angle):
-        self.root_chord_length_ft = root_chord_length_ft
-        self.tip_chord_length_ft = tip_chord_length_ft
-        self.span_ft = span_ft
-        self.hinge_line_position_ft = hinge_line_position_ft
+    def __init__(self, root_chord_length_in, tip_chord_length_in, span_in, lift_coefficient, rho_slug_ft3, velocity_ft_s, deflection_angle):
+        self.root_chord_length_in = root_chord_length_in
+        self.tip_chord_length_in = tip_chord_length_in
+        self.span_in = span_in
         self.lift_coefficient = lift_coefficient
         self.rho_slug_ft3 = rho_slug_ft3
         self.velocity_ft_s = velocity_ft_s
         self.deflection_angle = deflection_angle
+        logging.info(f'Aileron initialized with root_chord_length_in={root_chord_length_in}, tip_chord_length_in={tip_chord_length_in}, span_in={span_in}, lift_coefficient={lift_coefficient}, rho_slug_ft3={rho_slug_ft3}, velocity_ft_s={velocity_ft_s}, deflection_angle={deflection_angle}')
 
     def calculate_average_chord_length(self):
-        average_chord_length_ft = (self.root_chord_length_ft + self.tip_chord_length_ft) / 2
-        return average_chord_length_ft
+        average_chord_length_in = (self.root_chord_length_in + self.tip_chord_length_in) / 2
+        logging.info(f'Calculated average_chord_length_in={average_chord_length_in}')
+        return average_chord_length_in
 
     def calculate_lift_force(self):
         q = 0.5 * self.rho_slug_ft3 * self.velocity_ft_s**2
-        average_chord_length_ft = self.calculate_average_chord_length()
-        lift_per_unit_span = q * self.lift_coefficient * average_chord_length_ft
-        total_lift_force = lift_per_unit_span * self.span_ft
+        average_chord_length_in = self.calculate_average_chord_length()
+        average_chord_length_ft = average_chord_length_in / 12  # Convert inches to feet
+        
+        # Adjust lift coefficient based on deflection angle
+        adjusted_lift_coefficient = self.lift_coefficient * (1 + 0.1 * self.deflection_angle / 20)  # Example adjustment
+        
+        lift_per_unit_span = q * adjusted_lift_coefficient * average_chord_length_ft
+        total_lift_force = lift_per_unit_span * (self.span_in / 12)  # Convert inches to feet
+        logging.info(f'Calculated lift_force_lb={total_lift_force} with q={q}, average_chord_length_in={average_chord_length_in}, lift_per_unit_span={lift_per_unit_span}, adjusted_lift_coefficient={adjusted_lift_coefficient}')
         return total_lift_force
 
-    def calculate_moment_arm(self):
-        average_chord_length_ft = self.calculate_average_chord_length()
-        center_of_pressure_ft = 0.25 * average_chord_length_ft
-        moment_arm_ft = center_of_pressure_ft - self.hinge_line_position_ft
-        return moment_arm_ft
+    def calculate_moment_arm(self, hinge_line_position_in):
+        average_chord_length_in = self.calculate_average_chord_length()
+        center_of_pressure_in = 0.25 * average_chord_length_in
+        moment_arm_in = center_of_pressure_in - hinge_line_position_in
+        logging.info(f'Calculated moment_arm_in={moment_arm_in} with center_of_pressure_in={center_of_pressure_in}')
+        return moment_arm_in
 
-    def calculate_torque(self):
+    def calculate_torque(self, hinge_line_position_in):
         lift_force_lb = self.calculate_lift_force()
-        moment_arm_ft = self.calculate_moment_arm()
-        torque_ft_lb = lift_force_lb * moment_arm_ft
-        torque_in_lb = torque_ft_lb * 12
+        moment_arm_in = self.calculate_moment_arm(hinge_line_position_in)
+        torque_in_lb = lift_force_lb * moment_arm_in
+        logging.info(f'Calculated torque_in_lb={torque_in_lb} with lift_force_lb={lift_force_lb}, moment_arm_in={moment_arm_in}')
         return torque_in_lb
 
-    def draw_wing_with_aileron(self, wing_root_chord_ft, wing_tip_chord_ft, wing_span_ft):
+    def draw_wing_with_aileron(self, wing_root_chord_in, wing_tip_chord_in, wing_span_in):
+        logging.info(f'Drawing wing with aileron with wing_root_chord_in={wing_root_chord_in}, wing_tip_chord_in={wing_tip_chord_in}, wing_span_in={wing_span_in}')
         fig, ax = plt.subplots()
         
         # Define the coordinates of the wing (left half)
-        wing_x_left = [0, wing_root_chord_ft, wing_tip_chord_ft + .50333333, .50333333]
-        wing_y_left = [0, 0, wing_span_ft / 2, wing_span_ft / 2]
+        wing_x_left = [0, wing_root_chord_in, wing_tip_chord_in + 6.04, 6.04]
+        wing_y_left = [0, 0, wing_span_in / 2, wing_span_in / 2]
         
         # Define the coordinates of the aileron (left half)
         aileron_x_left = [
-            2.15166667 + self.root_chord_length_ft,
-            2.15166667,
-            1.982,
-            1.982 + self.tip_chord_length_ft
+            19.18 + self.root_chord_length_in,
+            19.18,
+            15.22,
+            15.22 + self.tip_chord_length_in
         ]
         aileron_y_left = [
-            6.833333333333333-2.63533333,
-            6.833333333333333-2.63533333,
-            6.833333333333333,
-            6.833333333333333
+            82 - 31.62,
+            82 - 31.62,
+            82,
+            82
         ]
         
         # Hinge line (left half)
-        hinge_line_x_left = [wing_root_chord_ft - self.hinge_line_position_ft, wing_root_chord_ft - self.hinge_line_position_ft]
-        hinge_line_y_left = [wing_span_ft / 2 - self.span_ft, wing_span_ft / 2]
+        hinge_line_x_left = [19.18, 15.22]
+        hinge_line_y_left = [82 - 31.62, 82]
 
         # Leading edge line (left half)
-        leading_edge_x_left = [0, .253333]
-        leading_edge_y_left = [0, wing_span_ft / 2]
+        leading_edge_x_left = [0, 6.04]
+        leading_edge_y_left = [0, wing_span_in / 2]
 
         # Plot the wing (left half)
         ax.plot(wing_x_left, wing_y_left, 'b', label='Wing (Left Half)')
@@ -74,9 +87,12 @@ class Aileron:
         # Plot the leading edge (left half)
         ax.plot(leading_edge_x_left, leading_edge_y_left, 'orange', label='Leading Edge (Left Half)')
 
+        # Shade the aileron area with grey
+        ax.fill(aileron_x_left, aileron_y_left, 'grey', alpha=0.5, label='Aileron Area')
+
         # Set labels and title
-        ax.set_xlabel('Chord Length (ft)')
-        ax.set_ylabel('Span (ft)')
+        ax.set_xlabel('Chord Length (in)')
+        ax.set_ylabel('Span (in)')
         ax.set_title('Wing Planform with Aileron')
 
         # Move legend to the left side of the figure
@@ -86,33 +102,33 @@ class Aileron:
         ax.set_aspect('equal', adjustable='box')
 
         # Set axis limits to show only the left half-span
-        ax.set_xlim(-.5, 3.5)
-        ax.set_ylim(-.5, 8)
+        ax.set_xlim(-6, 42)
+        ax.set_ylim(-6, 96)
 
         # Show plot with interactive features
         plt.show()
 
+        # Return the hinge line position
+        return hinge_line_x_left[0]  # Example: return the first hinge line position
+
 # Example usage
 if __name__ == "__main__":
-    root_chord_length_ft = 0.5  # Root chord length in feet (2 meters)
-    tip_chord_length_ft = 0.333  # Tip chord length in feet (1 meter)
-    span_ft = 2.58333  # Span in feet (1.5 meters)
-    hinge_line_position_ft = 0.1  # Hinge line position from the leading edge in feet (0.1 meters)
+    root_chord_length_in = 6  # Root chord length in inches (0.5 feet)
+    tip_chord_length_in = 4  # Tip chord length in inches (0.333 feet)
+    span_in = 31  # Span in inches (2.58333 feet)
     lift_coefficient = 1.2  # Lift coefficient at full deflection
     rho_slug_ft3 = 0.002377  # Air density in slugs/ft^3 (1.225 kg/m^3)
     velocity_ft_s = 38  # Flight velocity in ft/s (50 m/s)
-    deflection_angle = 20  # Deflection angle in degrees (not used in this simple model)
+    deflection_angle = 20  # Deflection angle in degrees
 
-    aileron = Aileron(root_chord_length_ft, tip_chord_length_ft, span_ft, hinge_line_position_ft, lift_coefficient, rho_slug_ft3, velocity_ft_s, deflection_angle)
+    aileron = Aileron(root_chord_length_in, tip_chord_length_in, span_in, lift_coefficient, rho_slug_ft3, velocity_ft_s, deflection_angle)
 
-    # Calculate the torque
-    torque = aileron.calculate_torque()
+    # Draw the wing with the aileron and get the hinge line position
+    wing_root_chord_in = 36  # Wing root chord length in inches (3 feet)
+    wing_tip_chord_in = 12  # Wing tip chord length in inches (1 foot)
+    wing_span_in = 172  # Wing full span in inches (14.33333333 feet)
+    hinge_line_position_in = aileron.draw_wing_with_aileron(wing_root_chord_in, wing_tip_chord_in, wing_span_in)
+
+    # Calculate the torque using the plotted hinge line position
+    torque = aileron.calculate_torque(hinge_line_position_in)
     print(f"Torque: {torque:.2f} in*lb")
-    
-    # Define wing geometry
-    wing_root_chord_ft = 3.0  # Wing root chord length in feet
-    wing_tip_chord_ft = 1.0  # Wing tip chord length in feet
-    wing_span_ft = 14.33333333  # Wing full span in feet
-
-    # Draw the wing with the aileron
-    aileron.draw_wing_with_aileron(wing_root_chord_ft, wing_tip_chord_ft, wing_span_ft)

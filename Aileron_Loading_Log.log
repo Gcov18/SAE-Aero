@@ -1,0 +1,28 @@
+2024-09-26 21:32:28,744 - INFO - Aileron initialized with root_chord_length_in=6, tip_chord_length_in=4, span_in=31, lift_coefficient=1.2, rho_slug_ft3=0.002377, velocity_ft_s=38, deflection_angle=20
+2024-09-26 21:32:28,744 - INFO - Drawing wing with aileron with wing_root_chord_in=36, wing_tip_chord_in=12, wing_span_in=172
+2024-09-26 21:32:29,746 - INFO - Calculated average_chord_length_in=5.0
+2024-09-26 21:32:29,746 - INFO - Calculated lift_force_lb=2.216750583333334 with q=1.7161940000000002, average_chord_length_in=5.0, lift_per_unit_span=0.8580970000000001
+2024-09-26 21:32:29,746 - INFO - Calculated average_chord_length_in=5.0
+2024-09-26 21:32:29,746 - INFO - Calculated moment_arm_in=-17.93 with center_of_pressure_in=1.25
+2024-09-26 21:32:29,746 - INFO - Calculated torque_in_lb=-39.746337959166674 with lift_force_lb=2.216750583333334, moment_arm_in=-17.93
+2024-09-26 22:09:03,678 - INFO - Aileron initialized with root_chord_length_in=6, tip_chord_length_in=4, span_in=31, lift_coefficient=1.2, rho_slug_ft3=0.002377, velocity_ft_s=38, deflection_angle=20
+2024-09-26 22:09:03,678 - INFO - Drawing wing with aileron with wing_root_chord_in=36, wing_tip_chord_in=12, wing_span_in=172
+2024-09-26 22:09:06,139 - INFO - Calculated average_chord_length_in=5.0
+2024-09-26 22:09:06,139 - INFO - Calculated lift_force_lb=2.438425641666667 with q=1.7161940000000002, average_chord_length_in=5.0, lift_per_unit_span=0.9439067000000001, adjusted_lift_coefficient=1.32
+2024-09-26 22:09:06,139 - INFO - Calculated average_chord_length_in=5.0
+2024-09-26 22:09:06,139 - INFO - Calculated moment_arm_in=-17.93 with center_of_pressure_in=1.25
+2024-09-26 22:09:06,139 - INFO - Calculated torque_in_lb=-43.72097175508334 with lift_force_lb=2.438425641666667, moment_arm_in=-17.93
+2024-10-07 22:21:24,648 - INFO - Aileron initialized with root_chord_length_in=6, tip_chord_length_in=4, span_in=31, lift_coefficient=1.2, rho_slug_ft3=0.002377, velocity_ft_s=38, deflection_angle=20
+2024-10-07 22:21:24,648 - INFO - Drawing wing with aileron with wing_root_chord_in=36, wing_tip_chord_in=12, wing_span_in=172
+2024-10-07 22:21:41,427 - INFO - Calculated average_chord_length_in=5.0
+2024-10-07 22:21:41,427 - INFO - Calculated lift_force_lb=2.438425641666667 with q=1.7161940000000002, average_chord_length_in=5.0, lift_per_unit_span=0.9439067000000001, adjusted_lift_coefficient=1.32
+2024-10-07 22:21:41,427 - INFO - Calculated average_chord_length_in=5.0
+2024-10-07 22:21:41,427 - INFO - Calculated moment_arm_in=-17.93 with center_of_pressure_in=1.25
+2024-10-07 22:21:41,427 - INFO - Calculated torque_in_lb=-43.72097175508334 with lift_force_lb=2.438425641666667, moment_arm_in=-17.93
+2024-10-08 19:51:58,531 - INFO - Aileron initialized with root_chord_length_in=6, tip_chord_length_in=4, span_in=31, lift_coefficient=1.2, rho_slug_ft3=0.002377, velocity_ft_s=38, deflection_angle=20
+2024-10-08 19:51:58,531 - INFO - Drawing wing with aileron with wing_root_chord_in=36, wing_tip_chord_in=12, wing_span_in=172
+2024-10-08 19:52:15,568 - INFO - Calculated average_chord_length_in=5.0
+2024-10-08 19:52:15,568 - INFO - Calculated lift_force_lb=2.438425641666667 with q=1.7161940000000002, average_chord_length_in=5.0, lift_per_unit_span=0.9439067000000001, adjusted_lift_coefficient=1.32
+2024-10-08 19:52:15,568 - INFO - Calculated average_chord_length_in=5.0
+2024-10-08 19:52:15,569 - INFO - Calculated moment_arm_in=-17.93 with center_of_pressure_in=1.25
+2024-10-08 19:52:15,569 - INFO - Calculated torque_in_lb=-43.72097175508334 with lift_force_lb=2.438425641666667, moment_arm_in=-17.93
