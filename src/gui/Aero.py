@@ -2,13 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import logging
 import sys
 import os
-
-# Add the calculators directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), "calculators"))
-
-from Density_Calculator import main_density
-from Dynamic_viscosity_Calculator import dynamic_viscosity
-from Reynolds_Number_Calculator import main_reynolds
+from src.calculators.Density_Calculator import main_density
+from src.calculators.Dynamic_viscosity_Calculator import dynamic_viscosity
+from src.calculators.Reynolds_Number_Calculator import main_reynolds
 
 # Configure logging to log everything (DEBUG level and above) and write to a file
 log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "logs", "aero_gui.log")
@@ -17,7 +13,7 @@ logging.basicConfig(
 )
 
 # Version of the script
-__version__ = "0.54"
+__version__ = "0.55"
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
 
@@ -267,8 +263,6 @@ class Ui_MainWindow(object):
 
 
 if __name__ == "__main__":
-    import sys
-
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

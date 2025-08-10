@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class WingMomentArms:
     def __init__(self, root_chord, tip_chord, span):
         self.root_chord = root_chord
@@ -31,6 +32,7 @@ class WingMomentArms:
             drag_moment_arms[i] = mid_chord  # Assuming drag acts at the mid-chord point
 
         return lift_moment_arms, drag_moment_arms
+
 
 # Example usage
 if __name__ == "__main__":

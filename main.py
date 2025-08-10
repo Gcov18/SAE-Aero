@@ -12,7 +12,6 @@ Usage:
 """
 
 import sys
-import os
 import argparse
 from pathlib import Path
 
@@ -24,7 +23,7 @@ sys.path.insert(0, str(src_path))
 def run_gui():
     """Launch the GUI application."""
     try:
-        from gui.Aero import Ui_MainWindow
+        from src.gui.Aero import Ui_MainWindow
         from PyQt5 import QtWidgets
 
         app = QtWidgets.QApplication(sys.argv)
@@ -45,10 +44,10 @@ def run_demo():
 
     # Import modules
     try:
-        from calculators.Density_Calculator import calculate_air_density
-        from calculators.Reynolds_Number_Calculator import calculate_reynolds_number
-        from analysis.Wing_Loading import calculate_wing_loading
-        from analysis.Prandtl_Elliptical_Lift_Distribution import EllipticalLiftDistribution
+        from src.calculators.Density_Calculator import calculate_air_density
+        from src.calculators.Reynolds_Number_Calculator import calculate_reynolds_number
+        from src.analysis.Wing_Loading import calculate_wing_loading
+        from src.analysis.Prandtl_Elliptical_Lift_Distribution import EllipticalLiftDistribution
     except ImportError as e:
         print(f"Error importing modules: {e}")
         return
@@ -139,15 +138,15 @@ def run_analysis(analysis_type):
     print(f"Running {analysis_type} analysis...")
 
     if analysis_type == "lift":
-        from analysis.Lift_Calculator import Lift
+        from src.analysis.Lift_Calculator import Lift
 
         print("Lift analysis functionality available")
     elif analysis_type == "aileron":
-        from analysis.Aileron_Sizing import calculate_aileron_size_gudmundsson
+        from src.analysis.Aileron_Sizing import calculate_aileron_size_gudmundsson
 
         print("Aileron sizing functionality available")
     elif analysis_type == "wing":
-        from analysis.Wing_Loading import calculate_wing_loading
+        from src.analysis.Wing_Loading import calculate_wing_loading
 
         print("Wing loading functionality available")
     else:

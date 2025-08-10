@@ -1,11 +1,10 @@
 import aerosandbox as asb
-import aerosandbox.numpy as np
-import matplotlib.pyplot as plt
-import aerosandbox.tools.pretty_plots as p
 import logging
 
 # Configure logging to log everything (DEBUG level and above) and write to a file
-logging.basicConfig(filename='Wing_Test_log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    filename="Wing_Test_log.txt", filemode="a", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # Define airfoils
 logging.debug("Defining airfoils")
@@ -25,10 +24,10 @@ airplane = asb.Airplane(
                     xyz_le=[0, 0, 0],  # Coordinates of the XSec's leading edge, relative to the wing's leading edge.
                     chord=0.9144,
                     twist=0,  # degrees
-                    airfoil=wing_airfoil,  
+                    airfoil=wing_airfoil,
                 ),
                 asb.WingXSec(  # Mid
-                    xyz_le=[0.1524, 1.143, .0399],
+                    xyz_le=[0.1524, 1.143, 0.0399],
                     chord=0.6069,
                     twist=0,
                     airfoil=wing_airfoil,
@@ -39,9 +38,9 @@ airplane = asb.Airplane(
                     twist=0,
                     airfoil=wing_airfoil,
                 ),
-            ]
+            ],
         )
-    ]
+    ],
 )
 
 # Debugging output for wing section coordinates
@@ -51,8 +50,7 @@ for i, xsec in enumerate(airplane.wings[0].xsecs):
 # Set up and run VLM analysis
 logging.debug("Setting up and running VLM analysis")
 vlm = asb.VortexLatticeMethod(
-    airplane=airplane,
-    op_point=asb.OperatingPoint(velocity=9.7536, alpha=5) #velocity=m/s and alpha=degrees
+    airplane=airplane, op_point=asb.OperatingPoint(velocity=9.7536, alpha=5)  # velocity=m/s and alpha=degrees
 )
 aero = vlm.run()
 for k, v in aero.items():
@@ -69,7 +67,7 @@ opti = asb.Opti()
 alpha = opti.variable(init_guess=5, lower_bound=0, upper_bound=10)  # Set bounds for alpha
 vlm = asb.VortexLatticeMethod(
     airplane=airplane,
-    op_point=asb.OperatingPoint(velocity=9.7536, alpha=alpha), #velocity=m/s
+    op_point=asb.OperatingPoint(velocity=9.7536, alpha=alpha),  # velocity=m/s
     align_trailing_vortices_with_wind=False,
 )
 aero = vlm.run()
@@ -81,7 +79,7 @@ opti.minimize(-L_over_D)
 # Adjust solver options
 opti.solver_options = {
     "ipopt.max_iter": 1000,  # Increase maximum number of iterations
-    "ipopt.tol": 1e-6,       # Adjust tolerance level
+    "ipopt.tol": 1e-6,  # Adjust tolerance level
 }
 
 try:

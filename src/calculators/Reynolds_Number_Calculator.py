@@ -1,6 +1,7 @@
 import numpy as np
 import logging
 
+
 def calculate_reynolds_number(density, velocity, chord_length, dynamic_viscosity):
     """
     Calculate the Reynolds number for a wing.
@@ -17,6 +18,7 @@ def calculate_reynolds_number(density, velocity, chord_length, dynamic_viscosity
     reynolds_number = (density * velocity * chord_length) / dynamic_viscosity
     return reynolds_number
 
+
 def chord_length_at_position(root_chord, tip_chord, span, y_position):
     """
     Calculate the chord length at a specific spanwise position for a tapered wing.
@@ -32,9 +34,11 @@ def chord_length_at_position(root_chord, tip_chord, span, y_position):
     """
     return root_chord + (tip_chord - root_chord) * (y_position / (span / 2))
 
+
 def main_reynolds(density, velocity, root_chord, tip_chord, span, dynamic_viscosity, num_positions=50):
     """
-    Main function to calculate the average Reynolds number for a tapered wing given fluid properties and wing characteristics.
+    Main function to calculate the average Reynolds number for a tapered wing given fluid properties and wing
+    characteristics.
 
     Parameters:
     density (float): Density of the fluid (kg/m^3)
@@ -49,13 +53,21 @@ def main_reynolds(density, velocity, root_chord, tip_chord, span, dynamic_viscos
     float: Average Reynolds number
     """
     logging.basicConfig(level=logging.INFO)
-    
+
     y_positions = np.linspace(0, span / 2, num_positions)
-    reynolds_numbers = np.array([calculate_reynolds_number(density, velocity, chord_length_at_position(root_chord, tip_chord, span, y), dynamic_viscosity) for y in y_positions])
-    
+    reynolds_numbers = np.array(
+        [
+            calculate_reynolds_number(
+                density, velocity, chord_length_at_position(root_chord, tip_chord, span, y), dynamic_viscosity
+            )
+            for y in y_positions
+        ]
+    )
+
     average_reynolds_number = np.mean(reynolds_numbers)
     logging.info(f"The average Reynolds number is: {average_reynolds_number:.2e}")
     return average_reynolds_number
+
 
 # Example usage
 if __name__ == "__main__":

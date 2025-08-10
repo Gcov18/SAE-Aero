@@ -9,7 +9,6 @@ This script provides utilities for managing the SAE Aero project including:
 - Setting up development environment
 """
 
-import os
 import sys
 import shutil
 import subprocess

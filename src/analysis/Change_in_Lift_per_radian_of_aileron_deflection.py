@@ -1,5 +1,6 @@
 # Aileron_Sizing.py
 
+
 def calculate_cl_delta(wing_span, wing_area, aileron_effectiveness=0.9):
     """
     Calculate the change in lift coefficient per radian of aileron deflection.
@@ -19,6 +20,7 @@ def calculate_cl_delta(wing_span, wing_area, aileron_effectiveness=0.9):
     cl_delta = (2 * 3.14159 * aileron_effectiveness) / aspect_ratio
 
     return cl_delta
+
 
 # Example usage
 wing_span = 15  # feet

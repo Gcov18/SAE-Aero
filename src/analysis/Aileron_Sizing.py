@@ -1,6 +1,9 @@
 # Aileron_Sizing.py
 
-def calculate_aileron_size_gudmundsson(wing_span, wing_area, desired_roll_rate, airspeed, cl_delta, aileron_effectiveness, taper_ratio=1.0):
+
+def calculate_aileron_size_gudmundsson(
+    wing_span, wing_area, desired_roll_rate, airspeed, cl_delta, aileron_effectiveness, taper_ratio=1.0
+):
     """
     Calculate the size of an aileron based on the wing's dimensions and desired roll rate using Gudmundsson's equation.
 
@@ -16,9 +19,6 @@ def calculate_aileron_size_gudmundsson(wing_span, wing_area, desired_roll_rate, 
     Returns:
     tuple: The required aileron area in square feet, aileron length in feet, and aileron chord in feet.
     """
-    # Constants
-    rho = 0.0023769  # Air density at sea level in slugs/ft^3
-
     # Adjust cl_delta for taper ratio
     cl_delta_adjusted = cl_delta * (1 + taper_ratio) / 2
 
@@ -47,6 +47,7 @@ def calculate_aileron_size_gudmundsson(wing_span, wing_area, desired_roll_rate, 
 
     return aileron_area, aileron_length, aileron_chord
 
+
 # Example usage
 wing_span = 15  # feet (10 meters converted to feet)
 wing_area = 30  # square feet (20 square meters converted to square feet)
@@ -56,7 +57,9 @@ cl_delta = 2.78  # change in lift coefficient per radian of aileron deflection
 aileron_effectiveness = 0.9  # aileron effectiveness
 taper_ratio = 0.333  # example taper ratio
 
-aileron_area, aileron_length, aileron_chord = calculate_aileron_size_gudmundsson(wing_span, wing_area, desired_roll_rate, airspeed, cl_delta, aileron_effectiveness, taper_ratio)
+aileron_area, aileron_length, aileron_chord = calculate_aileron_size_gudmundsson(
+    wing_span, wing_area, desired_roll_rate, airspeed, cl_delta, aileron_effectiveness, taper_ratio
+)
 print(f"The aileron length is {aileron_length:.2f} feet.")
 print(f"The aileron chord is {aileron_chord:.2f} feet.")
 print(f"The required aileron area is {aileron_area:.2f} square feet.")

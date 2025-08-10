@@ -9,25 +9,26 @@ class Airfoil:
     def calculate_aerodynamic_forces(self):
         # Calculate dynamic pressure
         q = 0.5 * self.rho * self.velocity**2
-        
+
         # Calculate lift force
         lift = q * self.lift_coefficient * self.chord_length
-        
+
         # Calculate moment about the aerodynamic center (typically at 25% chord)
         moment_ac = q * self.moment_coefficient * self.chord_length**2
-        
+
         return lift, moment_ac
 
     def calculate_center_of_pressure(self):
         lift, moment_ac = self.calculate_aerodynamic_forces()
-        
+
         # Aerodynamic center is typically at 25% chord
         aerodynamic_center = 0.25 * self.chord_length
-        
+
         # Calculate center of pressure
         center_of_pressure = aerodynamic_center + (moment_ac / lift)
-        
+
         return center_of_pressure
+
 
 # Example usage
 if __name__ == "__main__":
