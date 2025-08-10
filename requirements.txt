@@ -1,0 +1,16 @@
+# SAE Aero Design Analysis Toolkit Requirements
+
+# Core scientific computing
+numpy>=1.21.0
+matplotlib>=3.5.0
+
+# GUI framework
+PyQt5>=5.15.0
+
+# Advanced aerodynamic analysis (optional)
+aerosandbox>=4.0.0
+
+# Development and testing (optional)
+pytest>=6.0.0
+black>=21.0.0
+flake8>=4.0.0

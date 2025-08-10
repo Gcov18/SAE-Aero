@@ -1,16 +1,26 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import logging
+import sys
+import os
+
+# Add the calculators directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), "calculators"))
+
 from Density_Calculator import main_density
 from Dynamic_viscosity_Calculator import dynamic_viscosity
 from Reynolds_Number_Calculator import main_reynolds
 
 # Configure logging to log everything (DEBUG level and above) and write to a file
-logging.basicConfig(filename='log.txt', filemode='a', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "logs", "aero_gui.log")
+logging.basicConfig(
+    filename=log_path, filemode="a", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # Version of the script
-__version__ = "0.46"
+__version__ = "0.54"
 
 logging.info(f"Starting Insert Data to Shop Floor script v{__version__}")
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -174,7 +184,9 @@ class Ui_MainWindow(object):
         self.reynolds_number_lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.reynolds_number_lineEdit.setReadOnly(True)
         self.reynolds_number_lineEdit.setObjectName("reynolds_number_lineEdit")
-        self.calculate_density_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.calculate_density())
+        self.calculate_density_pushButton = QtWidgets.QPushButton(
+            self.centralwidget, clicked=lambda: self.calculate_density()
+        )
         self.calculate_density_pushButton.setGeometry(QtCore.QRect(590, 300, 300, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -183,7 +195,9 @@ class Ui_MainWindow(object):
         self.calculate_density_pushButton.setFont(font)
         self.calculate_density_pushButton.setStyleSheet("background-color: rgb(0, 255, 127);")
         self.calculate_density_pushButton.setObjectName("calculate_density_pushButton")
-        self.calculate_dynamic_viscocity_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.calculate_dynamic_viscocity())
+        self.calculate_dynamic_viscocity_pushButton = QtWidgets.QPushButton(
+            self.centralwidget, clicked=lambda: self.calculate_dynamic_viscocity()
+        )
         self.calculate_dynamic_viscocity_pushButton.setGeometry(QtCore.QRect(590, 360, 300, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -192,7 +206,9 @@ class Ui_MainWindow(object):
         self.calculate_dynamic_viscocity_pushButton.setFont(font)
         self.calculate_dynamic_viscocity_pushButton.setStyleSheet("background-color: rgb(0, 255, 127);")
         self.calculate_dynamic_viscocity_pushButton.setObjectName("calculate_dynamic_viscocity_pushButton")
-        self.calculate_reynolds_number_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.calculate_reynolds_number())
+        self.calculate_reynolds_number_pushButton = QtWidgets.QPushButton(
+            self.centralwidget, clicked=lambda: self.calculate_reynolds_number()
+        )
         self.calculate_reynolds_number_pushButton.setGeometry(QtCore.QRect(590, 420, 300, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -252,6 +268,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

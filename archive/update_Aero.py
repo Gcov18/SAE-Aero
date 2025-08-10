@@ -18,8 +18,8 @@ if commit_count is not None:
     # Divide the commit count by 100 to get a version number with two decimal places
     version = commit_count / 100
 
-    # Specify the path to the Python file
-    file_path = 'C:\\Coding\\SAE_Aero\\Aero.py'
+    # Specify the path to the Python file (updated for new project structure)
+    file_path = 'C:\\Coding\\SAE_Aero\\src\\gui\\Aero.py'
 
     # Read the current content of the Python file
     with open(file_path, 'r') as file:
